@@ -1,6 +1,10 @@
 {
   "name": "legione-etruria-client",
-  "version": "0.0.0",
+  "description": "Angular port of legioneetruria.com",
+  "version": "0.0.1",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
