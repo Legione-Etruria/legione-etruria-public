@@ -6,9 +6,10 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ParallaxDirective } from './parallax.directive';
 import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
-  declarations: [AppComponent, HomepageComponent, ParallaxDirective],
+  declarations: [AppComponent, HomepageComponent, ParallaxDirective, AboutUsComponent],
   imports: [BrowserModule, AppRoutingModule, NgbModule, NgxSmoothScrollModule],
   providers: [],
   bootstrap: [AppComponent],
