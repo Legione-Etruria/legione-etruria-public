@@ -21,9 +21,9 @@
   style="vertical-align: middle; height: 100px; max-width: 100%"
 >
   <img
-    src="../assets/images/logo/LogoSquadra.png"
+    src="../assets/images/logo/PatchSquadraSVG.svg"
     class="float-left"
-    style="max-width: 100px; margin-left: 20px"
+    style="max-width: 80px; margin-left: 20px"
   />
 
   <div class="col position-absolute">
@@ -33,7 +33,7 @@
           class="nav-link active"
           routerLink="/"
           [ngClass]="{ disabled: checkRoute() === '/home' }"
-          >Home</a
+          ><i class="fas fa-home"> Home</i></a
         >
       </li>
       <li class="nav-item">
@@ -41,14 +41,18 @@
           class="nav-link"
           [ngClass]="{ disabled: checkRoute() === '/membri' }"
           routerLink="/membri"
-          >Membri</a
+          ><i class="fas fa-users"></i> Membri</a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Gioca con noi</a>
+        <a class="nav-link" href="#"
+          ><i class="fas fa-info"></i> Gioca con noi</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Chi Siamo</a>
+        <a class="nav-link" href="#"
+          ><i class="fas fa-question"></i> Chi Siamo</a
+        >
       </li>
     </ul>
   </div>
@@ -56,21 +60,28 @@
 <div>
   <router-outlet></router-outlet>
 </div>
-
-<div class="thumbnail text-center col align-self-center">
-  <div class="span1bg-primary text-center">
-    <img
-      class="center-block img-fluid rounded mx-auto d-block"
-      src="../assets/images/Footer_bg_2.png"
-      style="max-width: 1000px"
-    />
-  </div>
-  <div class="caption sticky-bottom" style="color: whitesmoke">
-    <p>©2021 di Legione Etrvria Softair A.S.D.</p>
-    <span>Sviluppato da Vecchietti Stefano e Ruja Emanuele Andrea</span>
-    <p>
-      Prato(PO), Toscana. Italia | legioneetruria@gmail.com | C.F: 92109860483
-    </p>
-    <i class="fas fa-qrcode" style="font-size: 50px"></i>
+<div
+  class="container"
+  [ngxSmoothScroll]="options"
+  childSelector=".content"
+  smooth-wheel
+  smooth-keydown
+>
+  <div class="thumbnail text-center col align-self-center">
+    <div class="span1bg-primary text-center">
+      <img
+        class="center-block img-fluid rounded mx-auto d-block"
+        src="../assets/images/Footer_bg_2.png"
+        style="max-width: 1000px"
+      />
+    </div>
+    <div class="caption sticky-bottom" style="color: whitesmoke">
+      <p>©2021 di Legione Etrvria Softair A.S.D.</p>
+      <span>Sviluppato da Vecchietti Stefano e Ruja Emanuele Andrea</span>
+      <p>
+        Prato(PO), Toscana. Italia | legioneetruria@gmail.com | C.F: 92109860483
+      </p>
+      <i class="fas fa-qrcode" style="font-size: 50px"></i>
+    </div>
   </div>
 </div>
