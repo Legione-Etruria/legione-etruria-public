@@ -1,56 +1,76 @@
-<nav class="flex items-center justify-between flex-wrap p-3 h-36 bg-black">
+<meta
+  name="theme-color"
+  content="#3b3d2e"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#3b3d2e"
+  media="(prefers-color-scheme: dark)"
+/>
+
+<div class="position-absolute w-100">
   <img
-    routerLink="/"
-    class="h-36 w-36"
+    src="../assets/images/Menu_bar_6.png"
+    class="float-right img-fluid"
+    style="max-width: 600px"
+  />
+</div>
+<div
+  class="row position-relative align-items-center"
+  style="vertical-align: middle; height: 100px; max-width: 100%"
+>
+  <img
     src="../assets/images/logo/LogoSquadra.png"
+    class="float-left"
+    style="max-width: 100px; margin-left: 20px"
   />
 
-  <img
-    class="fixed top-0 right-0"
-    routerLink="/"
-    src="https://static.wixstatic.com/media/57daf8_1f30a6eedacf4108af7eda64d6bc8f67~mv2.png/v1/fill/w_663,h_377,al_c,usm_0.66_1.00_0.01/Menu_bar_6_edited_edited.png"
-  />
-
-  <div class="relative text-l space-x-8 text-gray-100 mr-60 text-justify">
-    <a
-      href="#responsive-header"
-      class="
-        block
-        mt-4
-        lg:inline-block lg:mt-0
-        text-teal-200
-        hover:text-gray-200
-        mr-4
-      "
-    >
-      Membri
-    </a>
-    <a
-      href="#responsive-header"
-      class="
-        block
-        mt-4
-        lg:inline-block lg:mt-0
-        text-teal-200
-        hover:text-gray-200
-        mr-4
-      "
-    >
-      Chi siamo
-    </a>
-    <a
-      href="#responsive-header"
-      class="
-        block
-        mt-4
-        lg:inline-block lg:mt-0
-        text-teal-200
-        hover:text-gray-200
-      "
-    >
-      Gioca con noi
-    </a>
+  <div class="col position-absolute">
+    <ul class="nav justify-content-end navbar-dark">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          routerLink="/"
+          [ngClass]="{ disabled: checkRoute() === '/home' }"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [ngClass]="{ disabled: checkRoute() === '/membri' }"
+          routerLink="/membri"
+          >Membri</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Gioca con noi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Chi Siamo</a>
+      </li>
+    </ul>
   </div>
-</nav>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
 
-<router-outlet></router-outlet>
+<div class="thumbnail text-center col align-self-center">
+  <div class="span1bg-primary text-center">
+    <img
+      class="center-block img-fluid rounded mx-auto d-block"
+      src="../assets/images/Footer_bg_2.png"
+      style="max-width: 1000px"
+    />
+  </div>
+  <div class="caption sticky-bottom" style="color: whitesmoke">
+    <p>©2021 di Legione Etrvria Softair A.S.D.</p>
+    <span>Sviluppato da Vecchietti Stefano e Ruja Emanuele Andrea</span>
+    <p>
+      Prato(PO), Toscana. Italia | legioneetruria@gmail.com | C.F: 92109860483
+    </p>
+    <i class="fas fa-qrcode" style="font-size: 50px"></i>
+  </div>
+</div>

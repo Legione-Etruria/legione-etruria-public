@@ -1,1 +1,22 @@
-<p>homepage works!</p>
+<div style="z-index: -1; position: relative" appParallax [ratio]="0.5">
+  <img src="../../assets/images/members/members_homepage_pic.jpg" />
+</div>
+<div
+  style="
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    vertical-align: middle;
+  "
+>
+  <i
+    class="fab fa-instagram"
+    style="cursor: pointer"
+    (click)="visitLink('https://www.instagram.com/legione_etruria/')"
+  ></i>
+  <i
+    class="fab fa-facebook"
+    style="margin-left: 20px; cursor: pointer"
+    (click)="visitLink('https://www.facebook.com/legioneEtruria/')"
+  ></i>
+</div>
