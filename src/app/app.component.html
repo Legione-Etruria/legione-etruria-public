@@ -12,7 +12,7 @@
   <div class="position-absolute w-100">
     <picture>
       <img
-        id="green_bubble"
+        id="header_bubble"
         src="../assets/images/Menu_bar_6.png"
         class="float-right img-fluid"
         style="max-width: 600px"
@@ -44,7 +44,7 @@
               class="nav-link active"
               routerLink="/"
               [ngClass]="{ disabled: checkRoute() === '/home' }"
-              ><i class="fas fa-home"></i> Home</a
+              ><i class="fas fa-home"></i> <label>Home</label></a
             >
           </li>
           <li class="nav-item">
@@ -52,12 +52,12 @@
               class="nav-link"
               [ngClass]="{ disabled: checkRoute() === '/membri' }"
               routerLink="/membri"
-              ><i class="fas fa-users"></i> Membri</a
+              ><i class="fas fa-users"></i> <label>Membri</label></a
             >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"
-              ><i class="fas fa-info"></i> Gioca con noi</a
+              ><i class="fas fa-info"></i> <label>Gioca con noi</label></a
             >
           </li>
           <li class="nav-item">
@@ -65,7 +65,7 @@
               class="nav-link"
               routerLink="/chi-siamo"
               [ngClass]="{ disabled: checkRoute() === '/chi-siamo' }"
-              ><i class="fas fa-question"></i> Chi Siamo</a
+              ><i class="fas fa-question"></i> <label>Chi Siamo</label></a
             >
           </li>
         </ul>
@@ -73,19 +73,28 @@
     </nav>
   </div>
 </header>
-<router-outlet></router-outlet>
+
+<div id="body-wrapper">
+  <router-outlet></router-outlet>
+</div>
+
 <footer>
-  <div class="thumbnail text-center col align-self-center">
+  <div class="col align-self-center" id="footer-wrapper">
+    <img
+      id="footer-bubble"
+      class="mx-auto d-block img-responsive"
+      src="../assets/images/Footer_bg_2.png"
+      style="max-width: 1000px"
+    />
     <div class="span1bg-primary text-center">
-      <img
-        class="center-block img-fluid rounded mx-auto d-block"
-        src="../assets/images/Footer_bg_2.png"
-        style="max-width: 1000px"
-      />
-      <div class="caption sticky-bottom" style="color: whitesmoke">
+      <div
+        id="footer-content"
+        class="caption sticky-bottom"
+        style="color: whitesmoke"
+      >
         <p>©2021 di Legione Etrvria Softair A.S.D.</p>
         <span>Sviluppato da Vecchietti Stefano e Ruja Emanuele Andrea</span>
-        <p>
+        <p id="footer-info">
           Prato(PO), Toscana. Italia | legioneetruria@gmail.com | C.F:
           92109860483
         </p>

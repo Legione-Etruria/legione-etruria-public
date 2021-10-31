@@ -25,19 +25,84 @@ header nav {
 
 @media screen and (max-width: 768px) {
   header nav {
+    display: block;
+  }
+
+  header #header_bubble {
+    width: 450px;
+  }
+
+  #footer-wrapper {
+    position: fixed;
+    bottom: 0;
+  }
+
+  #footer-content {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 10px;
+    width: fit-content;
+    font-size: 18px;
+  }
+
+  #footer-info {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  //TABLETS
+  header label {
     display: none;
   }
 
-  header #green_bubble {
-    width: 500px;
+  header nav {
+    font-size: 24px;
+    margin-bottom: 30px;
+    letter-spacing: 20px;
   }
 
-  header #logo {
-    margin-left: unset;
-    background-color: violet;
+  header #header_bubble {
+    width: 450px;
   }
 
-  router-outlet {
-    position: relative;
+  #footer-wrapper {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  //PHONES
+  header label {
+    display: none;
+  }
+
+  header nav {
+    font-size: 24px;
+    margin-bottom: 60px;
+    letter-spacing: 0px;
+  }
+
+  header #header_bubble {
+    width: 300px;
+  }
+
+  #footer-bubble {
+    display: none;
+  }
+
+  #footer-wrapper {
+    position: fixed;
+    bottom: 0;
+  }
+
+  #footer-content {
+    text-align: right;
+    margin-left: 100px;
+    margin-top: 40px;
+    margin-right: 10px;
+    width: fit-content;
+    font-size: 10px;
   }
 }
