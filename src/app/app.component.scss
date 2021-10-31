@@ -18,3 +18,26 @@ a {
 a:hover {
   color: #946c00;
 }
+
+header nav {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+
+  header #green_bubble {
+    width: 500px;
+  }
+
+  header #logo {
+    margin-left: unset;
+    background-color: violet;
+  }
+
+  router-outlet {
+    position: relative;
+  }
+}
