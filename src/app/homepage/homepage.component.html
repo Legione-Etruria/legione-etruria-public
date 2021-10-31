@@ -1,15 +1,15 @@
 <div style="z-index: -1; position: relative" appParallax [ratio]="0.5">
-  <img src="../../assets/images/members/members_homepage_pic.jpg" />
+  <img
+    src="../../assets/images/members/members_homepage_pic.jpg"
+    id="splash-screen"
+  />
 </div>
 <div
-  style="
-    text-align: center;
-    margin-top: 10px;
-    font-size: 40px;
-    vertical-align: middle;
-  "
+  id="social-media-icons"
+  style="text-align: center; vertical-align: middle; font-size: 40px"
 >
   <i
+    id="icon-instagram"
     class="fab fa-instagram"
     style="cursor: pointer"
     (click)="visitLink('https://www.instagram.com/legione_etruria/')"
@@ -19,4 +19,11 @@
     style="margin-left: 20px; cursor: pointer"
     (click)="visitLink('https://www.facebook.com/legioneEtruria/')"
   ></i>
+</div>
+<div style="margin-top: 200px; margin-left: 10%; color: #946c00">
+  <h2>Benvenuto in Legione Etruria 2.0!</h2>
+  <p style="color: black">
+    il sito è stato completamente riscritto per aumentare le prestazioni e
+    ridurre i costi di mantenimento. Please, enjoy your stay
+  </p>
 </div>
