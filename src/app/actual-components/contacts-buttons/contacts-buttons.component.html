@@ -1,0 +1,28 @@
+<div
+  class="border-transparent"
+  style="
+    width: max-content;
+    color: #ac9d79;
+    position: relative;
+    cursor: pointer;
+  "
+  (click)="visitLink()"
+>
+  <i
+    class="{{ iconClass }}"
+    style="font-size: 100px; display: inline-block; margin-right: 10px"
+  ></i>
+  <div
+    style="
+      display: inline-table;
+      vertical-align: top;
+      letter-spacing: 5px;
+      color: #8d8d8d;
+    "
+  >
+    <b style="font-size: 34px; text-transform: capitalize">{{ contactName }}</b>
+    <p style="font-size: 12px">
+      {{ contactValue }}
+    </p>
+  </div>
+</div>
