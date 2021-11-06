@@ -1,0 +1,45 @@
+@media screen and (max-width: 415px) {
+  #main_img_wrapper {
+    height: 100%;
+  }
+
+  #figt_coreto_wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+  }
+
+  #figt_img {
+    display: block;
+    width: 30%;
+
+    float: left;
+  }
+
+  #coreto_img {
+    width: 25%;
+    float: right;
+    margin-top: 0px;
+    display: block;
+  }
+
+  #about_us_title {
+    margin-right: 0px;
+  }
+
+  #about_us_body {
+    margin-left: 15%;
+    width: fit-content;
+    margin-right: 15%;
+    word-spacing: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #about_us_body {
+    font-size: 18px;
+    margin-left: 32%;
+    margin-right: 32%;
+    margin-top: 10px;
+  }
+}
