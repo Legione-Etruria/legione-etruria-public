@@ -1,0 +1,30 @@
+@media screen and (max-width: 414px) {
+  #wrapper {
+    width: 10%;
+  }
+
+  #icon {
+    font-size: 60px;
+  }
+
+  #contact-name {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 736px) {
+  #wrapper {
+    width: max-content;
+  }
+  #icon {
+    font-size: 100px;
+  }
+
+  #text-wrapper {
+    margin-left: 10px;
+  }
+
+  #contact-name {
+    font-size: 34px;
+  }
+}
