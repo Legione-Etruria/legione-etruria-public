@@ -1,24 +1,31 @@
 <div
   id="wrapper"
-  class="border-transparent"
-  style="color: #ac9d79; position: relative; cursor: pointer"
+  class="
+    border-transparent
+    text-light-gold
+    position-relative
+    w-md-100
+    flex
+    justify-content-start
+    text-truncate
+  "
+  style="cursor: pointer"
   (click)="visitLink()"
 >
-  <i id="icon" class="{{ iconClass }}" style="display: inline-block"></i>
+  <i id="icon" class="{{ iconClass }} d-inline-block text-6xl"></i>
+
   <div
     id="text-wrapper"
-    style="
-      display: inline-table;
-      vertical-align: top;
-      letter-spacing: 5px;
-      color: #8d8d8d;
-    "
+    class="d-inline-block align-top ml-2"
+    style="letter-spacing: 5px; color: #8d8d8d"
   >
-    <b id="contact-name" style="text-transform: capitalize">{{
-      contactName
-    }}</b>
-    <p style="font-size: 12px">
+    <b
+      id="contact-name"
+      class="text-capitalize flex justify-content-start text-3xl"
+      >{{ contactName }}</b
+    >
+    <small>
       {{ contactValue }}
-    </p>
+    </small>
   </div>
 </div>
