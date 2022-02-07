@@ -12,6 +12,10 @@
 <!-- component -->
 <div class="max-h-screen h-screen max-w-screen sm:w-auto lg:hidden">
   <div>
+    <div class="bg-gray-100 rounded sticky inset-x-0 top-5 m-4 shadow">
+      <img src="../assets/images/logo/PatchSquadraSVG.svg" class="h-20 p-2" />
+    </div>
+
     <ng-container *ngTemplateOutlet="routerOutlet"></ng-container>
     <div class="sticky inset-x-0 bottom-5 h-16 text-white flex justify-center">
       <div
@@ -102,7 +106,7 @@
 </div>
 
 <ng-template #routerOutlet>
-  <div id="body-wrapper">
+  <div id="body-wrapper" class="my-10">
     <router-outlet></router-outlet>
   </div>
 </ng-template>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { NgxSmoothScrollDirectiveOption } from '@eunsatio/ngx-smooth-scroll';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -47,6 +48,8 @@ export class AppComponent {
       label: 'Area membri',
     },
   ];
+
+  pageTitles$ = of(this.titleService.getTitle());
 
   public options: NgxSmoothScrollDirectiveOption = {
     duration: 500, // Global option
