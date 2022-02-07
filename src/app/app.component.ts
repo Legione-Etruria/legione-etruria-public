@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { NgxSmoothScrollDirectiveOption } from '@eunsatio/ngx-smooth-scroll';
-import { NgbConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +33,7 @@ export class AppComponent {
     {
       routerLink: '/members/my-legio',
       iconClass: 'fas fa-street-view',
-      label: '',
+      label: 'Il mio account',
     },
   ];
 
@@ -50,10 +49,9 @@ export class AppComponent {
   };
   constructor(
     private router: Router,
-    ngbConfig: NgbConfig,
+
     private titleService: Title
   ) {
-    ngbConfig.animation = true;
     titleService.setTitle('Legione Etruria');
   }
 }

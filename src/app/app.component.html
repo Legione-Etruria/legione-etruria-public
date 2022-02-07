@@ -1,4 +1,4 @@
-<meta
+<!-- <meta
   name="theme-color"
   content="#3b3d2e"
   media="(prefers-color-scheme: light)"
@@ -7,55 +7,39 @@
   name="theme-color"
   content="#3b3d2e"
   media="(prefers-color-scheme: dark)"
-/>
+/> -->
+<!-- component -->
+<!-- component -->
+<div class="m-2">
+  <div class="flex justify-between items-center rounded">
+    <img src="../assets/images/logo/PatchSquadraSVG.svg" class="w-24" />
+    <div class="flex border-gray-200 dark:border-gray-700">
+      <button
+        *ngFor="let route of appRoutes"
+        [routerLink]="route.routerLink"
+        routerLinkActive="text-indigo-600 border-indigo-500 dark:border-indigo-400 dark:text-indigo-300 border shadow"
+        class="flex items-center h-10 px-2 py-2 -mb-px text-center bg-transparent sm:px-4 -px-1 whitespace-nowrap focus:outline-none rounded"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-4 h-4 mx-1 sm:w-6 sm:h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
+          />
+        </svg>
 
-<header>
-  <div class="position-absolute w-100">
-    <picture>
-      <img
-        id="header_bubble"
-        src="../assets/images/Menu_bar_6.png"
-        class="float-right img-fluid"
-        style="max-width: 600px"
-      />
-    </picture>
+        <span class="mx-1 text-sm sm:text-base"> {{ route.label }} </span>
+      </button>
+    </div>
   </div>
-
-  <img
-    id="logo"
-    src="../assets/images/logo/PatchSquadraSVG.svg"
-    class="position-absolute float-left"
-    style="max-width: 80px; margin-left: 20px; margin-top: 10px"
-  />
-  <div
-    class="row position-relative align-items-center"
-    style="
-      vertical-align: middle;
-      height: 100px;
-      max-width: 100%;
-      padding-bottom: 20px;
-    "
-  >
-    <nav>
-      <div class="col position-absolute">
-        <ul class="nav justify-content-end navbar-dark">
-          <li
-            class="nav-item flex justify-center align-middle"
-            *ngFor="let item of appRoutes"
-          >
-            <a
-              class="nav-link"
-              [routerLink]="item.routerLink"
-              routerLinkActive="disabled"
-              ><i [class]="item.iconClass"></i>
-              <label class="ml-1"> {{ item.label }}</label></a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
+</div>
 
 <div id="body-wrapper">
   <router-outlet></router-outlet>

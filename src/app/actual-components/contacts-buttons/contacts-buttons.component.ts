@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'contact-button',
@@ -15,7 +15,6 @@ export class ContactsButtonsComponent implements OnInit {
   ngOnInit(): void {}
 
   visitLink() {
-    console.log(this.contactRedirect);
     if (this.contactRedirect.startsWith('mailto:')) {
       return (location.href = this.contactRedirect);
     }
