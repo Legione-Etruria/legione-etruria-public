@@ -10,17 +10,15 @@
 /> -->
 <!-- component -->
 <!-- component -->
-<div class="max-h-screen h-screen max-w-screen sm:w-auto sm:hidden">
+<div class="max-h-screen h-screen max-w-screen sm:w-auto lg:hidden">
   <div>
     <ng-container *ngTemplateOutlet="routerOutlet"></ng-container>
-    <div
-      class="sticky inset-x-0 bottom-5 h-16 text-white w-full mx-auto max-w-sm"
-    >
+    <div class="sticky inset-x-0 bottom-5 h-16 text-white">
       <div
-        class="flex flew-row w-full mx-auto h-full rounded-full px-3 bg-legio-green-400 shadow-lg"
+        class="flex flew-row w-full h-full rounded-full px-3 bg-legio-green-400 shadow-lg"
       >
         <a
-          class="my-auto mx-2 rounded-full w-1/5 p-2"
+          class="my-auto mx-2 rounded-full w-1/5 p-2 flex justify-center"
           [routerLink]="route.routerLink"
           routerLinkActive="ring ring-legio-gold rounded-full "
           *ngFor="let route of appRoutes"
@@ -47,7 +45,7 @@
 </div>
 
 <!--! DESKTOP -->
-<div class="hidden sm:block w-screen h-screen">
+<div class="hidden lg:block w-screen h-screen">
   <div class="flex justify-between items-center rounded m-1">
     <img src="../assets/images/logo/PatchSquadraSVG.svg" class="w-24" />
     <div class="flex dark:border-gray-700 space-x-5">
