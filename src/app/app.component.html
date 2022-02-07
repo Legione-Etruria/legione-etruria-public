@@ -15,12 +15,12 @@
     <ng-container *ngTemplateOutlet="routerOutlet"></ng-container>
     <div class="sticky inset-x-0 bottom-5 h-16 text-white">
       <div
-        class="flex flew-row w-full h-full rounded-full px-3 bg-legio-green-400 shadow-lg"
+        class="flex flew-row w-full h-full rounded-full px-3 bg-legio-green-400 shadow-lg border-4 border-legio-gold-500"
       >
         <a
-          class="my-auto mx-2 rounded-full w-1/5 p-2 flex justify-center"
+          class="my-auto m-4 rounded-full w-1/5 p-1 flex justify-center"
           [routerLink]="route.routerLink"
-          routerLinkActive="ring ring-legio-gold rounded-full "
+          routerLinkActive="border border-white rounded-full shadow"
           *ngFor="let route of appRoutes"
         >
           <svg
