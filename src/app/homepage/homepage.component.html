@@ -1,31 +1,15 @@
-<div style="z-index: -1; position: relative" appParallax [ratio]="0.5">
-  <section style="overflow: hidden">
-    <img
-      src="../../assets/images/members/members_homepage_pic.jpg"
-      id="splash-screen"
-    />
-  </section>
-</div>
-<div
-  id="social-media-icons"
-  style="text-align: center; vertical-align: middle; font-size: 40px"
->
-  <i
-    id="icon-instagram"
-    class="fab fa-instagram"
-    style="cursor: pointer"
-    (click)="visitLink('https://www.instagram.com/legione_etruria/')"
-  ></i>
-  <i
-    class="fab fa-facebook"
-    style="margin-left: 20px; cursor: pointer"
-    (click)="visitLink('https://www.facebook.com/legioneEtruria/')"
-  ></i>
-</div>
-<div style="margin-top: 200px; margin-left: 10%; color: #946c00">
-  <h2>Benvenuto in Legione Etruria 2.0!</h2>
-  <p style="color: black">
-    il sito è stato completamente riscritto per aumentare le prestazioni e
-    ridurre i costi di mantenimento. Please, enjoy your stay
-  </p>
+<div class="flex w-full justify-between m-5">
+  <img
+    src="../../assets/images/members/main-wallpaper.jpg"
+    class="shadow-xl rounded-2xl"
+  />
+  <div class="m-10 w-full">
+    <h1 class="font-semibold text-3xl text-legio-gold-500">Legione Etruria</h1>
+    <div class="text-xl text-gray-600">🇮🇹 Italian Airsoft Team</div>
+    <button
+      class="cursor-pointer text-bold bg-legio-green-400 rounded-full text-white shadow py-3 px-5 text-xl mt-5 transition duration-500 ease-in-out hover:bg-legio-gold-500 transform hover:-translate-t-1 hover:scale-110"
+    >
+      Iscriviti ora.
+    </button>
+  </div>
 </div>

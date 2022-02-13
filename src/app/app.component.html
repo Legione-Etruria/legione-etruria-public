@@ -8,15 +8,14 @@
   content="#3b3d2e"
   media="(prefers-color-scheme: dark)"
 /> -->
-<!-- component -->
-<!-- component -->
+
 <div class="max-h-screen h-screen max-w-screen sm:w-auto lg:hidden">
   <div>
     <div class="bg-gray-100 rounded sticky inset-x-0 top-5 m-4 shadow">
       <img src="../assets/images/logo/PatchSquadraSVG.svg" class="h-20 p-2" />
     </div>
 
-    <ng-container *ngTemplateOutlet="routerOutlet"></ng-container>
+    <!-- <ng-container *ngTemplateOutlet="routerOutlet"></ng-container> -->
     <div class="sticky inset-x-0 bottom-5 h-16 text-white flex justify-center">
       <div
         class="flex flew-row w-11/12 h-full rounded-full px-3 bg-legio-green-400 shadow-lg border-4 border-legio-gold-500"
@@ -50,14 +49,14 @@
 
 <!--! DESKTOP -->
 <div class="hidden lg:block w-screen h-screen">
-  <div class="flex justify-between items-center rounded m-1">
+  <div class="flex justify-between items-center rounded mx-2">
     <img src="../assets/images/logo/PatchSquadraSVG.svg" class="w-24" />
     <div class="flex dark:border-gray-700 space-x-5">
       <button
         *ngFor="let route of appRoutes"
         [routerLink]="route.routerLink"
         routerLinkActive="text-legio-gold-500 border shadow"
-        class="transition duration-500 ease-in-out bg-blue-600 transform hover:-translate-t-1 hover:scale-110 flex items-center h-10 px-2 py-2 -mb-px text-center bg-transparent sm:px-4 -px-1 whitespace-nowrap focus:outline-none rounded"
+        class="transition duration-500 ease-in-out transform hover:-translate-t-1 hover:scale-110 flex items-center h-10 px-2 py-2 -mb-px text-center bg-transparent sm:px-4 -px-1 whitespace-nowrap focus:outline-none rounded"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -74,39 +73,52 @@
             [attr.d]="path"
           />
         </svg>
-
-        <span class="mx-1 text-sm sm:text-base"> {{ route.label }} </span>
+        <span class="text-sm sm:text-base"> {{ route.label }} </span>
       </button>
     </div>
   </div>
 
-  <!-- <ng-container *ngTemplateOutlet="routerOutlet"></ng-container> -->
-
-  <!-- <footer id="footer" class="">
-    <div class="col self-center absolute" id="footer-wrapper">
-      <img
-        id="footer-bubble"
-        class="mx-auto block img-responsive"
-        src="../assets/images/Footer_bg_2.png"
-        style="max-width: 1000px"
-      />
-      <div class="span1bg-primary text-center mt-10">
-        <div id="footer-content" class="caption sticky-bottom text-gray-400">
-          <p>©2021 di Legione Etrvria Softair A.S.D.</p>
-          <span>Sviluppato da Vecchietti Stefano e Ruja Emanuele Andrea</span>
-          <p id="footer-info">
-            Prato(PO), Toscana. Italia | legioneetruria@gmail.com | C.F:
-            92109860483
-          </p>
-          <i class="fas fa-qrcode" style="font-size: 50px"></i>
-        </div>
-      </div>
-    </div>
-  </footer> -->
+  <ng-container *ngTemplateOutlet="routerOutlet"></ng-container>
 </div>
 
+<footer id="footer" class="w-full mt-5">
+  <div class="bg-legio-green-500 text-white p-5">
+    <div class="flex justify-between">
+      <div>
+        © Legione Etruria ASD
+        <div class="text-gray-300">
+          Prato(PO), Toscana. Italia | legioneetruria@gmail.com | C.F:
+          92109860483
+        </div>
+      </div>
+
+      <span
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-16 w-16 hover:text-gray-400"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"
+          /></svg
+      ></span>
+    </div>
+    <div class="mt-2 text-sm">
+      Portale web sviluppato ed ideato da <b> Vecchietti Stefano</b>
+      <div class="text-xs text-legio-gold-500">
+        Icons made by some awsome people at Flaticon.com and Freepik.com
+      </div>
+    </div>
+  </div>
+</footer>
+
 <ng-template #routerOutlet>
-  <div id="body-wrapper" class="my-10">
+  <div id="body-wrapper" class="m-5">
     <router-outlet></router-outlet>
   </div>
 </ng-template>

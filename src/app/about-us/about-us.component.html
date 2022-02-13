@@ -1,54 +1,33 @@
-<div
-  id="main_img_wrapper"
-  style="
-    z-index: -1;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  "
-  appParallax
-  [ratio]="0.5"
->
-  <img src="../../assets/images/members/about-us-cover-photo.jpeg" />
+<div id="about_us_title" class="flex justify-center">
+  <h1 class="text-legio-gold-500">Chi Siamo</h1>
 </div>
-<div
-  style="
-    text-align: center;
-    margin-top: 20px;
-    font-size: 40px;
-    vertical-align: middle;
-  "
->
-  <div
-    class="position-relative img-fluid w-100"
-    style="padding-right: 20%"
-    id="figt_coreto_wrapper"
-  >
-    <div class="float-right">
+<div class="flex space-x-5 flex-wrap w-full h-full m-5">
+  <div id="main_img_wrapper" class="w-6/12 h-full" appParallax>
+    <img
+      src="../../assets/images/members/about-us-cover-photo-ar.png"
+      class="object-contain rounded shadow-xl"
+    />
+  </div>
+  <div class="w-5/12">
+    <div id="about_us_body" class="w-full text-lg">
+      Siamo una <b> Associazione Sportiva </b> neonata sul suolo Toscano,
+      situati in provincia di Prato, cerchiamo di affermarci come Squadra
+      agonistica nello sport del Softair all'interno della <b> F.I.G.T.</b>
+      <div class="mt-2">
+        Con allenamenti constanti e molti ex-militari tra i nostri ranghi
+        trasformiamo diamanti grezzi in stelle ma lasciando spazio anche al
+        divertimento! Lavoro di squadra, costanza e sani principi: questo è
+        quello in cui crede <b class="text-legio-gold-500"> Legione Etrvria!</b>
+      </div>
+    </div>
+
+    <div class="flex m-2 my-5 space-x-10 w-2/12">
       <img
         id="figt_img"
         src="../../assets/images/logo/figt_logo.png"
-        class="img-fluid mx-auto"
+        class="object-contain"
       />
-      <img
-        id="coreto_img"
-        src="../../assets/images/logo/coreto_logo.png"
-        class="img-fluid mx-auto mt-10"
-      />
+      <img id="coreto_img" src="../../assets/images/logo/coreto_logo.png" />
     </div>
-  </div>
-
-  <div style="margin-right: 30%" id="about_us_title">
-    <h1 style="color: #ba8a06">Chi Siamo</h1>
-  </div>
-
-  <div id="about_us_body" class="text-justify" style="font-size: 18px">
-    Siamo una Associazione Sportiva neonata sul suolo Toscano, situati in
-    provincia di Prato (PO) e dintorni, cerchiamo di affermarci come Squadra
-    agonistica nello sport del Softair. Con allenamenti constanti e molti
-    ex-militari tra i nostri ranghi trasformiamo diamanti grezzi in stelle ma
-    lasciando spazio anche al divertimento! Lavoro di squadra, costanza e sani
-    principi: questo è quello in cui crede Legione Etrvria!
   </div>
 </div>
