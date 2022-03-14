@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { MembersComponent } from './members/members.component';
-import { PlayWithUsComponent } from './play-with-us/play-with-us.component';
+import { AboutUsComponent } from './containers/about-us/about-us.component';
+import { HomepageComponent } from './containers/homepage/homepage.component';
+import { MembersComponent } from './containers/members/members.component';
+import { PlayWithUsComponent } from './containers/play-with-us/play-with-us.component';
 
 const routes: Routes = [
   {

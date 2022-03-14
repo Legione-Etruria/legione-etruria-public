@@ -2,13 +2,3 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-/* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
-
-.text-gold {
-  color: #946c00;
-}
-
-.text-light-gold {
-  color: #ac9d79;
-}

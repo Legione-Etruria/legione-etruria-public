@@ -8,47 +8,19 @@
   content="#3b3d2e"
   media="(prefers-color-scheme: dark)"
 /> -->
-
-<div class="max-h-screen h-screen max-w-screen sm:w-auto lg:hidden">
+<!-- ! MOBILE HEADER-CONTENT -->
+<div class="max-h-screen max-w-screen sm:w-auto lg:hidden">
   <div>
     <div class="bg-gray-100 rounded sticky inset-x-0 top-5 m-4 shadow">
       <img src="../assets/images/logo/PatchSquadraSVG.svg" class="h-20 p-2" />
     </div>
 
     <!-- <ng-container *ngTemplateOutlet="routerOutlet"></ng-container> -->
-    <div class="sticky inset-x-0 bottom-5 h-16 text-white flex justify-center">
-      <div
-        class="flex flew-row w-11/12 h-full rounded-full px-3 bg-legio-green-400 shadow-lg border-4 border-legio-gold-500"
-      >
-        <a
-          class="my-auto rounded-full w-1/5 p-1 flex justify-center"
-          [routerLink]="route.routerLink"
-          routerLinkActive="border border-white rounded-full shadow"
-          *ngFor="let route of appRoutes"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-8 h-8 mx-1 sm:w-6 sm:h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              *ngFor="let path of route.iconPaths"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              [attr.d]="path"
-            />
-          </svg>
-        </a>
-      </div>
-    </div>
   </div>
 </div>
 
-<!--! DESKTOP -->
-<div class="hidden lg:block w-screen h-screen">
+<!--! DESKTOP HEADER CONTENT -->
+<header class="hidden lg:block w-screen bg-white top-0" id="header">
   <div class="flex justify-between items-center rounded mx-2">
     <img src="../assets/images/logo/PatchSquadraSVG.svg" class="w-24 mt-1" />
     <div class="flex dark:border-gray-700 space-x-5">
@@ -77,12 +49,15 @@
       </button>
     </div>
   </div>
+</header>
 
-  <ng-container *ngTemplateOutlet="routerOutlet"></ng-container>
+<div id="body-wrapper" class="">
+  <router-outlet></router-outlet>
 </div>
 
-<footer id="footer" class="w-full mt-5">
-  <div class="bg-legio-green-500 text-white p-5">
+<!-- ! DESKTOP FOOTER CONTENT -->
+<footer id="footer" class="w-full bottom-0">
+  <div class="bg-legio-green-500 text-white pt-5 pb-5 px-5">
     <div class="flex justify-between">
       <div>
         © Legione Etruria ASD
@@ -118,8 +93,34 @@
   </div>
 </footer>
 
-<ng-template #routerOutlet>
-  <div id="body-wrapper" class="m-5">
-    <router-outlet></router-outlet>
+<!-- ! MOBILE FOOTER CONTENT -->
+<div
+  class="sticky inset-x-0 bottom-5 h-16 text-white flex justify-center lg:hidden"
+>
+  <div
+    class="flex flew-row w-11/12 h-full rounded-full px-3 bg-legio-green-400 shadow-lg border-4 border-legio-gold-500"
+  >
+    <a
+      class="my-auto rounded-full w-1/5 p-1 flex justify-center"
+      [routerLink]="route.routerLink"
+      routerLinkActive="border border-white rounded-full shadow"
+      *ngFor="let route of appRoutes"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-8 h-8 mx-1 sm:w-6 sm:h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          *ngFor="let path of route.iconPaths"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          [attr.d]="path"
+        />
+      </svg>
+    </a>
   </div>
-</ng-template>
+</div>
