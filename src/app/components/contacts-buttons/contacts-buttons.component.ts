@@ -10,6 +10,7 @@ export class ContactsButtonsComponent implements OnInit {
   @Input() iconClass!: string;
   @Input() contactValue!: string;
   @Input() contactRedirect: string = 'https://www.google.com/';
+  @Input() imagePath?: string;
   constructor() {}
 
   ngOnInit(): void {}

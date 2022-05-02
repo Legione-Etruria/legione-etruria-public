@@ -1,0 +1,23 @@
+.slideshow {
+    height: 200px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .slideshow > div {
+    transform: translate3d(0, 0, 0);
+  }
+  .slide {
+    animation: moveSlideshow 12s linear infinite;
+  }
+
+ 
+  
+  @keyframes moveSlideshow {
+    100% { 
+      transform: translateX(-66.6666%);  
+    }
+  }

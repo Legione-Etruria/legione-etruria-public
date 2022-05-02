@@ -11,8 +11,13 @@
 <!-- ! MOBILE HEADER-CONTENT -->
 <div class="max-h-screen max-w-screen sm:w-auto lg:hidden">
   <div>
-    <div class="bg-gray-100 rounded sticky inset-x-0 top-5 m-4 shadow">
+    <div class="bg-gray-100 rounded sticky inset-x-0 top-5 m-4 shadow flex">
       <img src="../assets/images/logo/PatchSquadraSVG.svg" class="h-20 p-2" />
+      <h2
+        class="text-2xl md:text-4xl uppercase font-semibold tracking-wider text-legio-green-300 text-center align-middle flex flex-col justify-center"
+      >
+        Legione etruria
+      </h2>
     </div>
 
     <!-- <ng-container *ngTemplateOutlet="routerOutlet"></ng-container> -->
@@ -51,12 +56,12 @@
   </div>
 </header>
 
-<div id="body-wrapper" class="h-screen">
+<div id="body-wrapper" class="mx-4 md:mx-0 my-20">
   <router-outlet></router-outlet>
 </div>
 
 <!-- ! DESKTOP FOOTER CONTENT -->
-<footer id="footer" class="w-full bottom-0 relative">
+<footer id="footer" class="w-full">
   <div class="bg-legio-green-500 text-white pt-5 pb-5 px-5">
     <div class="flex justify-between">
       <div>
