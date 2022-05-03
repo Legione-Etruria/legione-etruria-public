@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -6,10 +7,14 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss'],
 })
-export class AboutUsComponent implements OnInit {
-  constructor(private titleService: Title) {
+export class AboutUsComponent {
+  @ViewChild('slideShowContainer') private slideshow!: ElementRef;
+  private interval!: any;
+  public timeLeft!: number;
+  constructor(
+    private titleService: Title,
+    private viewportScroller: ViewportScroller
+  ) {
     titleService.setTitle('Chi siamo');
   }
-
-  ngOnInit(): void {}
 }

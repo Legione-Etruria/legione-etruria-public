@@ -11,8 +11,12 @@
 <!-- ! MOBILE HEADER-CONTENT -->
 <div class="max-h-screen max-w-screen sm:w-auto lg:hidden">
   <div>
-    <div class="bg-gray-100 rounded sticky inset-x-0 top-5 m-4 shadow flex">
-      <img src="../assets/images/logo/PatchSquadraSVG.svg" class="h-20 p-2" />
+    <div class="rounded sticky inset-x-0 top-5 m-4 flex">
+      <img
+        src="../assets/images/logo/patchSquadraPNG.png"
+        class="w-20 mt-1 p-1"
+      />
+
       <h2
         class="text-2xl md:text-4xl uppercase font-semibold tracking-wider text-legio-green-300 text-center align-middle flex flex-col justify-center"
       >
@@ -27,7 +31,7 @@
 <!--! DESKTOP HEADER CONTENT -->
 <header class="hidden lg:block w-screen bg-white top-0" id="header">
   <div class="flex justify-between items-center rounded mx-2">
-    <img src="../assets/images/logo/PatchSquadraSVG.svg" class="w-24 mt-1" />
+    <img src="../assets/images/logo/patchSquadraPNG.png" class="w-24 mt-1" />
     <div class="flex dark:border-gray-700 space-x-5">
       <button
         *ngFor="let route of appRoutes"
@@ -56,7 +60,7 @@
   </div>
 </header>
 
-<div id="body-wrapper" class="mx-4 md:mx-0 my-20">
+<div id="body-wrapper" class="mx-4 md:mx-0 my-10 md:my-20">
   <router-outlet></router-outlet>
 </div>
 
@@ -103,7 +107,7 @@
   class="sticky inset-x-0 bottom-5 h-16 text-white flex justify-center lg:hidden"
 >
   <div
-    class="flex flew-row w-11/12 h-full rounded-full px-3 bg-legio-green-400 shadow-lg border-4 border-legio-gold-500 justify-center"
+    class="flex flew-row w-11/12 h-full rounded-full px-3 bg-legio-green-400 shadow-lg border-4 border-legio-gold-500 justify-around"
   >
     <a
       class="my-auto rounded-full w-1/5 p-1 flex justify-center"
