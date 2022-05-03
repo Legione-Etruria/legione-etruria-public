@@ -1,3 +1,4 @@
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
@@ -21,7 +22,7 @@ import { ParallaxDirective } from './parallax.directive';
     MembersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
