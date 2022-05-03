@@ -11,6 +11,10 @@ const routes: Routes = [
     component: HomepageComponent,
   },
   {
+    path: 'qr',
+    redirectTo: '/home',
+  },
+  {
     path: 'membri',
     component: MembersComponent,
   },
