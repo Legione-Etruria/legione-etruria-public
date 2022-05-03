@@ -22,7 +22,10 @@ const routes: Routes = [
     path: 'contattaci',
     component: PlayWithUsComponent,
   },
-
+  {
+    path: '**',
+    redirectTo: '/home',
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
