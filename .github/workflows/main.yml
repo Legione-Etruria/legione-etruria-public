@@ -22,7 +22,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: legioneetruria.com
-          local-dir: ./dist/legione-etruria-frontend/
+          local-dir: ./dist/legione-etruria-client/
           server-dir: ./domains/legioneetruria.com/public_html/
           username: u651057516
           password: ${{ secrets.FTP_PW }}
