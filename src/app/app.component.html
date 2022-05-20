@@ -39,31 +39,34 @@
     <div
       class="flex dark:border-gray-700 space-x-5 animate__fadeInDown animate__animated"
     >
-      <button
-        *ngFor="let route of appRoutes"
-        [routerLink]="route.routerLink"
-        [class.pointer-events-none]="route.disabled"
-        [class.text-gray-500]="route.disabled"
-        routerLinkActive="text-legio-gold-500 border shadow"
-        class="transition duration-500 ease-in-out transform hover:-translate-t-1 hover:scale-110 flex items-center h-10 px-2 py-2 -mb-px text-center bg-transparent sm:px-4 -px-1 whitespace-nowrap focus:outline-none rounded"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-4 h-4 mx-1 sm:w-6 sm:h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            *ngFor="let path of route.iconPaths"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            [attr.d]="path"
-          />
-        </svg>
-        <span class="text-sm sm:text-base"> {{ route.label }} </span>
-      </button>
+      <ng-container *ngFor="let route of appRoutes">
+        <a [attr.href]="route.href">
+          <button
+            [routerLink]="route.href?.length ? null : route.routerLink"
+            [class.pointer-events-none]="route.disabled"
+            [class.text-gray-500]="route.disabled"
+            routerLinkActive="text-legio-gold-500 border shadow"
+            class="transition duration-500 ease-in-out transform hover:-translate-t-1 hover:scale-110 flex items-center h-10 px-2 py-2 -mb-px text-center bg-transparent sm:px-4 -px-1 whitespace-nowrap focus:outline-none rounded"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 mx-1 sm:w-6 sm:h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                *ngFor="let path of route.iconPaths"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                [attr.d]="path"
+              />
+            </svg>
+            <span class="text-sm sm:text-base"> {{ route.label }} </span>
+          </button>
+        </a>
+      </ng-container>
     </div>
   </div>
 </header>
