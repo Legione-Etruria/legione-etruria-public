@@ -1,0 +1,5 @@
+
+
+.hoverAnimation {
+    @apply transition-all ease-in scale-90 hover:scale-100 hover:text-slate-400 cursor-pointer
+}
