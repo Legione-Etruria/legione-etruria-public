@@ -15,7 +15,7 @@
     <div class="rounded sticky inset-x-0 top-5 m-4 flex">
       <img
         src="../assets/images/logo/patchSquadraPNG.png"
-        class="w-20 mt-1 p-1"
+        class="w-20 mt-1 p-1 animate__fadeInDown animate__animated"
       />
 
       <h2
@@ -32,8 +32,13 @@
 <!--! DESKTOP HEADER CONTENT -->
 <header class="hidden lg:block w-screen bg-white top-0" id="header">
   <div class="flex justify-between items-center rounded mx-2">
-    <img src="../assets/images/logo/patchSquadraPNG.png" class="w-24 mt-1" />
-    <div class="flex dark:border-gray-700 space-x-5">
+    <img
+      src="../assets/images/logo/patchSquadraPNG.png"
+      class="w-24 mt-1 animate__fadeInDown animate__animated"
+    />
+    <div
+      class="flex dark:border-gray-700 space-x-5 animate__fadeInDown animate__animated"
+    >
       <button
         *ngFor="let route of appRoutes"
         [routerLink]="route.routerLink"
@@ -112,7 +117,7 @@
 
 <!-- ! MOBILE FOOTER CONTENT -->
 <div
-  class="sticky inset-x-0 bottom-5 h-16 text-white flex justify-center lg:hidden"
+  class="sticky inset-x-0 bottom-5 h-16 text-white flex justify-center lg:hidden animate__fadeInUp animate__animated"
 >
   <div
     class="flex flew-row w-11/12 h-full rounded-full px-3 bg-legio-green-400 shadow-lg border-4 border-legio-gold-500 justify-around"
