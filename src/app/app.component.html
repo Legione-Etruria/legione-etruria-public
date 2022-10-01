@@ -150,29 +150,31 @@
     class="flex flew-row w-11/12 h-full rounded-full px-3 bg-legio-green-400 shadow-lg border-4 border-legio-gold-500 justify-around"
   >
     <ng-container *ngFor="let route of appRoutes">
-      <span
-        [class.pointer-events-none]="route.disabled"
-        [class.text-gray-500]="route.disabled"
-        class="my-auto rounded-full w-1/5 p-1 flex justify-center"
-        [routerLink]="route.routerLink"
-        routerLinkActive="bg-legio-gold-500"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-8 h-8 mx-1 sm:w-6 sm:h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+      <a [attr.href]="route.href" class="w-1/5 p-1 my-auto">
+        <span
+          [class.pointer-events-none]="route.disabled"
+          [class.text-gray-500]="route.disabled"
+          class="rounded-full flex justify-center"
+          [routerLink]="route.href?.length ? null : route.routerLink"
+          routerLinkActive="bg-legio-gold-500"
         >
-          <path
-            *ngFor="let path of route.iconPaths"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            [attr.d]="path"
-          />
-        </svg>
-      </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 mx-1 sm:w-6 sm:h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              *ngFor="let path of route.iconPaths"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              [attr.d]="path"
+            />
+          </svg>
+        </span>
+      </a>
     </ng-container>
   </div>
 </div>
