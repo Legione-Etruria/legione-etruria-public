@@ -6,6 +6,13 @@ module.exports = {
   darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
+      scale: {
+        "-100": "-1",
+      },
+      fontFamily: {
+        "reem-kufi": ["Reem Kufi", "sans-serif"],
+        "special-elite": ["Special Elite", "cursive"],
+      },
       colors: {
         "legio-gold": {
           DEFAULT: "#946C00",

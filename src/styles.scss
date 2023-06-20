@@ -1,5 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import '~animate.css/animate.min'
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "~animate.css/animate.min";
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+
+.body-grid {
+  background-size: 55px 55px;
+  background-image: linear-gradient(
+      to right,
+      rgba(147, 149, 116, 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(147, 149, 116, 0.2) 1px, transparent 1px);
+}
+
+.body-gradient {
+  @apply bg-gradient-to-br from-gray-100/50 to-legio-green-50;
+}
+
+.page-title {
+  @apply text-5xl lg:text-[6rem] font-bold uppercase font-special-elite text-white drop-shadow;
+}
+
+// .title-gradient {
+//   //apply a gradient to the text from 'legio-green-200' to 'legio-green-400'
+//   @apply bg-gradient-to-r from-legio-green-50 to-legio-green-100 w-full;
+
+//   //set the background clip to text so the gradient is only applied to the text
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }
