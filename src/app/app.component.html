@@ -31,13 +31,14 @@
 
 <!--! DESKTOP HEADER CONTENT -->
 <header class="hidden lg:block w-screen top-0" id="header">
-  <div class="flex justify-between items-center rounded mx-2">
+  <div class="flex justify-between items-center">
+    <!-- LOGO LEGIO -->
     <img
       src="../assets/images/logo/patchSquadraPNG.png"
-      class="w-24 mt-1 animate__fadeInDown animate__animated"
+      class="w-4/12 h-[9rem] mt-1 animate__fadeInDown animate__animated object-contain p-2"
     />
     <div
-      class="flex dark:border-gray-700 space-x-5 animate__fadeInDown animate__animated"
+      class="flex dark:border-gray-700 space-x-5 animate__fadeInDown animate__animated w-9/12 my-auto"
     >
       <ng-container *ngFor="let route of appRoutes">
         <a [attr.href]="route.href">
@@ -45,8 +46,8 @@
             [routerLink]="route.href?.length ? null : route.routerLink"
             [class.pointer-events-none]="route.disabled"
             [class.text-gray-500]="route.disabled"
-            routerLinkActive="text-legio-gold-500 border shadow"
-            class="transition duration-500 ease-in-out transform hover:-translate-t-1 hover:scale-110 flex items-center h-10 px-2 py-2 -mb-px text-center bg-transparent sm:px-4 -px-1 whitespace-nowrap focus:outline-none rounded"
+            class="item hover:-translate-t-1 hover:scale-105 sm:px-4 -px-1 text-white"
+            routerLinkActive="drop-shadow-lg opacity-50 border-b scale-75 pointer-events-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -87,22 +88,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col items-end">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-16 w-16 hover:text-gray-400"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"
-          />
-        </svg>
-
+      <div class="flex flex-col justify-end items-end">
         <div class="flex justify-end mx-2">
           <small> v. 1.01 </small>
         </div>
