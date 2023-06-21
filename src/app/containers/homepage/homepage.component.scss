@@ -1,7 +1,3 @@
-.hoverAnimation {
-  @apply transition-all ease-in scale-90 hover:scale-100 hover:text-slate-400 cursor-pointer;
-}
-
 .link {
   @apply text-legio-gold-100/50 hover:text-legio-gold-200/50 font-bold hover:no-underline;
 }

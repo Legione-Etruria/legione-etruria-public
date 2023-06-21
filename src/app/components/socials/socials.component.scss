@@ -1,0 +1,15 @@
+.hoverAnimation {
+  @apply transition-all ease-in scale-90 hover:scale-100 hover:text-slate-400 cursor-pointer;
+
+  &.hover-green {
+    @apply hover:text-green-500;
+  }
+
+  &.hover-purple {
+    @apply hover:text-purple-400;
+  }
+
+  &.hover-blue {
+    @apply hover:text-blue-500;
+  }
+}

@@ -9,6 +9,7 @@ import { HomepageComponent } from './containers/homepage/homepage.component';
 import { MembersComponent } from './containers/members/members.component';
 import { PlayWithUsComponent } from './containers/play-with-us/play-with-us.component';
 import { ParallaxDirective } from './parallax.directive';
+import { SocialsComponent } from './components/socials/socials.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ParallaxDirective } from './parallax.directive';
     PlayWithUsComponent,
     ContactsButtonsComponent,
     MembersComponent,
+    SocialsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
 
