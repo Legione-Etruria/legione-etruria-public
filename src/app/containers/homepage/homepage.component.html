@@ -29,7 +29,10 @@
   <div class="h-screen w-6/12 relative">
     <!-- SOLDIER ARMY BORDER -->
     <div
-      class="absolute w-8/12 h-5/6 rounded-3xl border-8 right-0 left-0 top-0 bottom-0 m-auto animate__animated animate__slow animate__zoomIn animate__delay-3s shadow-2xl border-legio-gold-100 shadow-legio-gold-50 brightness-75 bg-gradient-to-b from-legio-gold-700 to-legio-gold-600"
+      #Border
+      (mousemove)="rotateItem($event)"
+      (mouseleave)="resetItem($event)"
+      class="absolute w-8/12 h-5/6 rounded-3xl border-8 right-0 left-0 top-0 bottom-0 m-auto animate__animated animate__slow animate__zoomIn animate__delay-3s shadow-2xl border-legio-gold-100 shadow-legio-gold-50 brightness-75 bg-gradient-to-b from-legio-gold-700 to-legio-gold-600 card smooth"
     >
       <img
         src="/assets/images/splash/landscape_1.jpg"
@@ -38,7 +41,7 @@
     </div>
 
     <div
-      class="absolute m-auto left-0 right-0 top-0 bottom-0 flex flex-col justify-center z-10 items-center space-y-10"
+      class="call-to-action flex flex-col justify-center z-10 items-center w-fit h-fit"
     >
       <button
         routerLink="/contattaci"
@@ -49,7 +52,7 @@
       <app-socials></app-socials>
     </div>
 
-    <div class="-scale-x-100">
+    <div class="-scale-x-100 pointer-events-none">
       <img
         src="/assets/images/splash/night.png"
         class="animate__fadeInLeft animate__slow animate__delay-1s animate__animated h-screen -z-10 lg:z-auto object-contain object-bottom bottom-0 w-full"

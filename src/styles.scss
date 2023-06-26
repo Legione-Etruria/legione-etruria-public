@@ -19,3 +19,7 @@
     @apply font-agdasima font-bold;
   }
 }
+
+.smooth {
+  @apply transition-all duration-500 ease-in-out;
+}

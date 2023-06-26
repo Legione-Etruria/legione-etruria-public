@@ -1,3 +1,33 @@
 .link {
   @apply text-legio-gold-100/50 hover:text-legio-gold-200/50 font-bold hover:no-underline;
 }
+@keyframes rotate-card-animation {
+  0% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(var(--rotateX))
+      rotateY(var(--rotateY)) translateZ(var(--translateZ));
+  }
+}
+
+@keyframes reset-card-animation {
+  0% {
+    transform: perspective(1000px) rotateX(var(--rotateX))
+      rotateY(var(--rotateY)) translateZ(var(--translateZ));
+  }
+  100% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px);
+  }
+}
+
+.card {
+  /* Card styles */
+  --rotateX: 0deg;
+  --rotateY: 0deg;
+  --translateZ: 0px;
+}
+
+.call-to-action {
+  @apply absolute m-auto left-0 right-0 top-0 bottom-0;
+}
