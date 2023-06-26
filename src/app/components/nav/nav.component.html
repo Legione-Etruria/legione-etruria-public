@@ -1,0 +1,76 @@
+<!--! DESKTOP HEADER CONTENT -->
+<header class="hidden lg:block w-screen top-0" id="header">
+  <div class="flex justify-center items-center lg:py-10">
+    <div
+      class="flex dark:border-gray-700 space-x-5 animate__fadeInDown animate__animated my-auto"
+    >
+      <ng-container *ngFor="let route of appRoutes">
+        <a [attr.href]="route.href">
+          <button
+            [routerLink]="route.href?.length ? null : route.routerLink"
+            [class.pointer-events-none]="route.disabled"
+            [class.text-gray-500]="route.disabled"
+            class="item hover:-translate-t-1 hover:scale-105 sm:px-4 -px-1 text-white"
+            routerLinkActive="drop-shadow-lg opacity-50 border-b scale-75 pointer-events-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 mx-1 sm:w-8 sm:h-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                *ngFor="let path of route.iconPaths"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                [attr.d]="path"
+              />
+            </svg>
+            <span class="text-sm sm:text-base lg:text-2xl font-reem-kufi">
+              {{ route.label }}
+            </span>
+          </button>
+        </a>
+      </ng-container>
+    </div>
+  </div>
+</header>
+
+<!-- ! MOBILE FOOTER CONTENT -->
+<div
+  class="inset-x-0 h-16 text-white flex justify-center lg:hidden animate__fadeInUp animate__animated fixed bottom-5 z-50"
+>
+  <div
+    class="flex flew-row w-11/12 h-full rounded-full px-3 bg-legio-green-400 shadow-lg border-4 border-legio-gold-500 justify-around"
+  >
+    <ng-container *ngFor="let route of appRoutes">
+      <a [attr.href]="route.href" class="w-1/5 p-1 my-auto">
+        <span
+          [class.pointer-events-none]="route.disabled"
+          [class.text-gray-500]="route.disabled"
+          class="rounded-full flex justify-center"
+          [routerLink]="route.href?.length ? null : route.routerLink"
+          routerLinkActive="bg-legio-gold-500"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 mx-1 sm:w-6 sm:h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              *ngFor="let path of route.iconPaths"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              [attr.d]="path"
+            />
+          </svg>
+        </span>
+      </a>
+    </ng-container>
+  </div>
+</div>

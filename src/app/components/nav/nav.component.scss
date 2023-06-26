@@ -1,0 +1,3 @@
+.item {
+  @apply transition duration-500 ease-in-out transform  flex items-center h-10 px-2 py-2 -mb-px text-center bg-transparent  whitespace-nowrap focus:outline-none;
+}

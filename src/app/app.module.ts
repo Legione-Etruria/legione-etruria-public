@@ -10,6 +10,8 @@ import { MembersComponent } from './containers/members/members.component';
 import { PlayWithUsComponent } from './containers/play-with-us/play-with-us.component';
 import { ParallaxDirective } from './parallax.directive';
 import { SocialsComponent } from './components/socials/socials.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { SocialsComponent } from './components/socials/socials.component';
     ContactsButtonsComponent,
     MembersComponent,
     SocialsComponent,
+    NavComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
 
