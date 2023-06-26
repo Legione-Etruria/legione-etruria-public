@@ -1,5 +1,9 @@
-<div class="w-full h-screen overflow-clip flex">
-  <div class="flex flex-col justify-center h-full lg:mx-20 page-title w-6/12">
+<div
+  class="w-full h-full overflow-auto overflow-x-hidden lg:overflow-clip flex flex-col lg:flex-row"
+>
+  <div
+    class="flex flex-col justify-center lg:mx-20 page-title w-full lg:w-6/12"
+  >
     <div
       (mousemove)="rotateItem($event, 9)"
       (mouseleave)="resetItem($event)"
@@ -13,7 +17,7 @@
 
     <h1 class="whitespace-nowrap pt-4 drop-shadow-xl">LEGIONE ETRURIA</h1>
     <h4
-      class="text-lg normal-case text-right text-gray-100 drop-shadow font-special-elite"
+      class="text-lg normal-case lg:text-right text-gray-100 drop-shadow font-special-elite"
     >
       <div>Italian Airsoft Team 🇮🇹</div>
 
@@ -32,11 +36,11 @@
       </div>
     </h4>
   </div>
-  <div class="h-screen w-6/12 relative">
+  <div class="w-full lg:w-6/12 relative">
     <!-- SOLDIER ARMY BORDER -->
     <div
       #Border
-      class="absolute w-8/12 h-5/6 rounded-3xl border-8 right-0 left-0 top-0 bottom-0 m-auto animate__animated animate__slow animate__zoomIn animate__delay-3s shadow-2xl border-legio-gold-100 shadow-legio-gold-50 brightness-75 bg-gradient-to-b from-legio-gold-700 to-legio-gold-600 card smooth"
+      class="absolute w-10/12 lg:w-8/12 h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__slow animate__zoomIn animate__delay-3s shadow-2xl border-legio-gold-100 shadow-legio-gold-50 brightness-75 bg-gradient-to-b from-legio-gold-700 to-legio-gold-600 card smooth"
     >
       <img
         src="/assets/images/splash/landscape_1.jpg"
@@ -56,10 +60,10 @@
       <app-socials></app-socials>
     </div>
 
-    <div class="-scale-x-100 pointer-events-none">
+    <div class="-scale-x-100 lg:absolute bottom-0 left-0 right-0">
       <img
         src="/assets/images/splash/night.png"
-        class="animate__fadeInLeft animate__slow animate__delay-1s animate__animated h-screen -z-10 lg:z-auto object-contain object-bottom bottom-0 w-full"
+        class="animate__fadeInLeft animate__slow animate__delay-1s animate__animated -z-10 lg:z-auto object-contain object-bottom w-full h-3/6 lg:h-screen"
       />
     </div>
   </div>
