@@ -6,11 +6,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Special+Elite&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agdasima&display=swap");
 
 .body-gradient {
   @apply bg-gradient-to-t from-legio-green-500 to-legio-green-600;
 }
 
 .page-title {
-  @apply text-5xl lg:text-[8rem] font-bold uppercase font-reenie-beanie text-right text-gray-50 drop-shadow;
+  @apply text-5xl lg:text-[8rem] uppercase text-right text-gray-50 drop-shadow;
+
+  & h1 {
+    @apply font-agdasima font-bold;
+  }
 }

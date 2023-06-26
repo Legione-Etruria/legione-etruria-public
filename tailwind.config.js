@@ -13,6 +13,7 @@ module.exports = {
         "reem-kufi": ["Reem Kufi", "sans-serif"],
         "special-elite": ["Special Elite", "cursive"],
         "reenie-beanie": ["Reenie Beanie", "cursive"],
+        agdasima: ["Agdasima", "cursive"],
       },
       colors: {
         "legio-gold": {
