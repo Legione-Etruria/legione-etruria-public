@@ -1,0 +1,14 @@
+<div
+  class="flex justify-center w-full relative items-center carousel animate-carousel"
+>
+  <div class="side-item" *ngIf="!previousItem"></div>
+  <div class="smooth side-item" *ngIf="previousItem">
+    <img [src]="previousItem" />
+  </div>
+  <div class="smooth main-item">
+    <img [src]="currentItem" />
+  </div>
+  <div class="smooth side-item" *ngIf="nextItem">
+    <img [src]="nextItem" />
+  </div>
+</div>
