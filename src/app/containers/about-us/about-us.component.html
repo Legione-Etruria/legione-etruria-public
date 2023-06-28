@@ -1,56 +1,62 @@
-<div class="flex flex-col justify-between min-h-screen overflow-hidden p-10">
-  <div id="about_us_title" class="page-title text-center">
-    <h1>chi siamo</h1>
-  </div>
-  <div class="flex flex-col lg:flex-row justify-around w-full space-y-5 my-5">
-    <div class="text-white font-reem-kufi w-full lg:w-6/12 text-center text-lg">
-      <p>
-        Siamo una squadra di softair con sede a Prato dal 2021. L'ASD è nata da
-        un piccolo gruppo di appassionati che ogni domenica si allenava
-        duramente per riuscire ad arrivare al livello agonistico e ad oggi conta
-        più di 20 membri.
-      </p>
-      <br />
-      <p>
-        Ci piace sfidare noi stessi e mettere alla prova le nostre abilità
-        tattiche e di mira, ogni allenamento è un'opportunità per migliorarci e
-        crescere come squadra.
-      </p>
-      <br />
-      <p>
-        La nostra determinazione e impegno ci hanno portato a ottenere risultati
-        notevoli nel circuito delle competizioni in un solo anno di attività ma,
-        oltre alla competizione, ci divertiamo molto insieme: Siamo come una
-        famiglia, ci sosteniamo e ci divertiamo durante le partitew e gli
-        allenamenti.
-      </p>
-      <br />
-      Il softair è un'esperienza che ci unisce e ci fa sentire vivi e cerchiamo
-      continuamente di crescere e mostrare la passione che abbiamo per questo
-      sport. Siamo orgogliosi di rappresentare Prato e di essere parte di questa
-      emozionante comunità. Siamo pronti per nuove sfide e per continuare a fare
-      il nostro meglio nel mondo del softair !
+<app-loading (loadingDone)="loading = false"></app-loading>
+
+<div class="smooth" [class.opacity-0]="loading">
+  <div class="flex flex-col justify-between min-h-screen overflow-hidden p-10">
+    <div id="about_us_title" class="page-title text-center">
+      <h1>chi siamo</h1>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-around w-full space-y-5 my-5">
+      <div
+        class="text-white font-reem-kufi w-full lg:w-6/12 text-center text-lg"
+      >
+        <p>
+          Siamo una squadra di softair con sede a Prato dal 2021. L'ASD è nata
+          da un piccolo gruppo di appassionati che ogni domenica si allenava
+          duramente per riuscire ad arrivare al livello agonistico e ad oggi
+          conta più di 20 membri.
+        </p>
+        <br />
+        <p>
+          Ci piace sfidare noi stessi e mettere alla prova le nostre abilità
+          tattiche e di mira, ogni allenamento è un'opportunità per migliorarci
+          e crescere come squadra.
+        </p>
+        <br />
+        <p>
+          La nostra determinazione e impegno ci hanno portato a ottenere
+          risultati notevoli nel circuito delle competizioni in un solo anno di
+          attività ma, oltre alla competizione, ci divertiamo molto insieme:
+          Siamo come una famiglia, ci sosteniamo e ci divertiamo durante le
+          partitew e gli allenamenti.
+        </p>
+        <br />
+        Il softair è un'esperienza che ci unisce e ci fa sentire vivi e
+        cerchiamo continuamente di crescere e mostrare la passione che abbiamo
+        per questo sport. Siamo orgogliosi di rappresentare Prato e di essere
+        parte di questa emozionante comunità. Siamo pronti per nuove sfide e per
+        continuare a fare il nostro meglio nel mondo del softair !
+      </div>
+
+      <div class="flex lg:flex-col">
+        <img
+          id="coreto_img"
+          src="../../assets/images/logo/coreto_logo.webp"
+          class="logo"
+        />
+        <img
+          id="figt_img"
+          src="../../assets/images/logo/figt_logo.webp"
+          class="logo"
+        />
+      </div>
     </div>
 
-    <div class="flex lg:flex-col">
-      <img
-        id="coreto_img"
-        src="../../assets/images/logo/coreto_logo.webp"
-        class="logo"
-      />
-      <img
-        id="figt_img"
-        src="../../assets/images/logo/figt_logo.webp"
-        class="logo"
-      />
-    </div>
+    <app-carousel [paths]="images" class="w-full my-10 lg:my-20"></app-carousel>
   </div>
-
-  <app-carousel [paths]="images" class="w-full my-10 lg:my-20"></app-carousel>
-</div>
-<div class="absolute bottom-0 w-full h-4/6 -z-10 blur-md">
-  <img
-    src="/assets/images/splash/group_2.webp"
-    class="w-full h-full object-cover"
-  />
+  <div class="absolute bottom-0 w-full h-4/6 -z-10 blur-md">
+    <img
+      src="/assets/images/splash/group_2.webp"
+      class="w-full h-full object-cover"
+    />
+  </div>
 </div>

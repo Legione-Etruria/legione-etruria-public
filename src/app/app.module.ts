@@ -13,6 +13,7 @@ import { MembersComponent } from './containers/members/members.component';
 import { PlayWithUsComponent } from './containers/play-with-us/play-with-us.component';
 import { ParallaxDirective } from './parallax.directive';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     NavComponent,
     FooterComponent,
     CarouselComponent,
+    LoadingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
 

@@ -7,6 +7,8 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./about-us.component.scss'],
 })
 export class AboutUsComponent {
+  public loading = true;
+
   constructor(titleService: Title) {
     titleService.setTitle('Chi siamo');
   }

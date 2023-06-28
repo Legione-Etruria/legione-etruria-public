@@ -6,6 +6,8 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
+  public loading = true;
+
   constructor(private titleService: Title) {
     titleService.setTitle('Home');
   }

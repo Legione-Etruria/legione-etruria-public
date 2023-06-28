@@ -1,0 +1,31 @@
+//a scss animation that waits for 2 seconds and then fades out the element
+//this is used in the loading component
+
+@keyframes fadeOut {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading {
+  animation: fadeOut 2s ease-in-out forwards;
+}
+
+//an animation that, over the course of 1 second, increases the width of the element from 0 to 100%
+//this is used in the loading component
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loading-bar {
+  animation: loading 1s ease-in-out forwards;
+}
