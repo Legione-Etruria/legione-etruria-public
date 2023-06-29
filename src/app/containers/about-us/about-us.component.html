@@ -13,7 +13,7 @@
           Siamo una squadra di softair con sede a Prato dal 2021. L'ASD è nata
           da un piccolo gruppo di appassionati che ogni domenica si allenava
           duramente per riuscire ad arrivare al livello agonistico e ad oggi
-          conta più di 20 membri.
+          conta più di 20 atleti.
         </p>
         <br />
         <p>
@@ -37,7 +37,9 @@
         continuare a fare il nostro meglio nel mondo del softair !
       </div>
 
-      <div class="flex lg:flex-col lg:w-3/12 justify-center lg:space-y-5">
+      <div
+        class="flex lg:flex-col lg:w-3/12 justify-center lg:space-y-5 animate__fadeInRight animate__animated animate__delay-2s"
+      >
         <div class="logo-container">
           <img
             (mousemove)="utilsService.rotateItem($event, 4)"
@@ -61,7 +63,9 @@
 
     <app-carousel [paths]="images" class="w-full my-10 lg:my-20"></app-carousel>
   </div>
-  <div class="absolute bottom-0 w-full h-4/6 -z-10 blur-md">
+  <div
+    class="absolute bottom-0 w-full h-4/6 -z-10 blur-lg animate__fadeInUp animate__animated animate__delay-2s animate__slow"
+  >
     <img
       src="/assets/images/splash/group_2.webp"
       class="w-full h-full object-cover"
