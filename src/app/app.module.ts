@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 import { ContactsButtonsComponent } from './components/contacts-buttons/contacts-buttons.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoadingComponent } from './components/loading/loading.component';
 import { NavComponent } from './components/nav/nav.component';
 import { SocialsComponent } from './components/socials/socials.component';
 import { AboutUsComponent } from './containers/about-us/about-us.component';
@@ -12,8 +14,7 @@ import { HomepageComponent } from './containers/homepage/homepage.component';
 import { MembersComponent } from './containers/members/members.component';
 import { PlayWithUsComponent } from './containers/play-with-us/play-with-us.component';
 import { ParallaxDirective } from './parallax.directive';
-import { CarouselComponent } from './components/carousel/carousel.component';
-import { LoadingComponent } from './components/loading/loading.component';
+import { UtilsService } from './services/utils.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     LoadingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
-
+  providers: [UtilsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

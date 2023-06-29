@@ -8,8 +8,8 @@
     class="flex flex-col justify-center lg:mx-20 page-title w-full lg:w-6/12 text-center items-center"
   >
     <div
-      (mousemove)="rotateItem($event, 9)"
-      (mouseleave)="resetItem($event)"
+      (mousemove)="utilsService.rotateItem($event, 9)"
+      (mouseleave)="utilsService.resetItem($event)"
       class="h-2/6 mx-auto"
     >
       <img

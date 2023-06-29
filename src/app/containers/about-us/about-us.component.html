@@ -1,7 +1,7 @@
 <app-loading (loadingDone)="loading = false"></app-loading>
 
 <div class="smooth" [class.opacity-0]="loading">
-  <div class="flex flex-col justify-between min-h-screen overflow-hidden p-10">
+  <div class="flex flex-col justify-between min-h-screen overflow-hidden">
     <div id="about_us_title" class="page-title text-center">
       <h1>chi siamo</h1>
     </div>
@@ -37,17 +37,25 @@
         continuare a fare il nostro meglio nel mondo del softair !
       </div>
 
-      <div class="flex lg:flex-col">
-        <img
-          id="coreto_img"
-          src="../../assets/images/logo/coreto_logo.webp"
-          class="logo"
-        />
-        <img
-          id="figt_img"
-          src="../../assets/images/logo/figt_logo.webp"
-          class="logo"
-        />
+      <div class="flex lg:flex-col lg:w-3/12 justify-center lg:space-y-5">
+        <div class="logo-container">
+          <img
+            (mousemove)="utilsService.rotateItem($event, 4)"
+            (mouseleave)="utilsService.resetItem($event)"
+            id="coreto_img"
+            src="../../assets/images/logo/coreto_logo.webp"
+            class="logo"
+          />
+        </div>
+        <div class="logo-container">
+          <img
+            (mousemove)="utilsService.rotateItem($event, 4)"
+            (mouseleave)="utilsService.resetItem($event)"
+            id="figt_img"
+            src="../../assets/images/logo/figt_logo.webp"
+            class="logo"
+          />
+        </div>
       </div>
     </div>
 

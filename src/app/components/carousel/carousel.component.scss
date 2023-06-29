@@ -1,5 +1,5 @@
 .main-item {
-  @apply rounded-lg shadow-2xl  w-96 h-96 z-10 absolute my-auto;
+  @apply rounded-lg shadow-2xl  w-80 h-80 lg:w-96 lg:h-96 z-10 absolute my-auto;
 
   & > img {
     @apply rounded-lg w-full h-full object-cover;
@@ -7,7 +7,7 @@
 }
 
 .side-item {
-  @apply rounded-lg shadow-lg brightness-50 opacity-75 w-80 h-80 my-auto;
+  @apply rounded-lg shadow-lg brightness-50 opacity-75 w-64 h-64 lg:w-80 lg:h-80 my-auto;
 
   & > img {
     @apply rounded-lg w-full h-full object-cover;
