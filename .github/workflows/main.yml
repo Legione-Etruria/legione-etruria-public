@@ -1,5 +1,8 @@
-on: push
-name: 🚀 Deploy to PROD
+on: 
+  push: 
+    branches: 
+    - main
+name: 🚀 Deploy website on push
 jobs:
   web-deploy:
     name: 🎉 Deploy
