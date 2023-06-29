@@ -4,12 +4,11 @@
       src="assets/images/logo/logo.webp"
       routerLink="/home"
       [class.opacity-0]="!isHome"
-      routerLinkActive="animate__fadeOutBottomRight animate__animated animate__delay-2s animate__faster"
-      class="smooth hover:brightness-125 cursor-pointer absolute w-24 object-contain left-20"
+      routerLinkActive="animate__fadeOutBottomRight  animate__delay-2s animate__faster"
+      class="smooth hover:brightness-125 cursor-pointer absolute w-24 object-contain left-20 animate__animated"
     />
     <img
-      [class.animate__fadeInBottomRight]="!isHome"
-      [class.opacity-0]="isHome"
+      [ngClass]="isHome ? 'opacity-0' : 'animate__fadeInBottomRight'"
       src="assets/images/logo/logo.webp"
       class="pointer-events-none animate__animated object-contain h-full"
     />
