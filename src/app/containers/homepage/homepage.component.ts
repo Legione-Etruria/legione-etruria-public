@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { UtilsService } from 'src/app/services/utils.service';
 @Component({
@@ -6,17 +6,10 @@ import { UtilsService } from 'src/app/services/utils.service';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss'],
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent {
   public loading = true;
 
-  constructor(titleService: Title, public utilsService: UtilsService) {
+  constructor(private titleService: Title, public utilsService: UtilsService) {
     titleService.setTitle('Home');
-  }
-
-  public ngOnInit(): void {}
-
-  visitLink(link: string) {
-    console.log('visitLink', link);
-    window.open(link);
   }
 }

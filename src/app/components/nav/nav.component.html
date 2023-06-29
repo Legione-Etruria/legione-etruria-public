@@ -1,76 +1,51 @@
-<!--! DESKTOP HEADER CONTENT -->
-<header class="hidden lg:block w-screen top-0" id="header">
-  <div class="flex justify-center items-center lg:py-10">
-    <div
-      class="flex dark:border-gray-700 space-x-5 animate__fadeInDown animate__animated my-auto"
-    >
-      <ng-container *ngFor="let route of appRoutes">
-        <a [attr.href]="route.href">
-          <button
-            [routerLink]="route.href?.length ? null : route.routerLink"
-            [class.pointer-events-none]="route.disabled"
-            [class.text-gray-500]="route.disabled"
-            class="item hover:-translate-t-1 hover:scale-105 sm:px-4 -px-1 text-white"
-            routerLinkActive="drop-shadow-lg opacity-50 border-b scale-75 pointer-events-none"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 mx-1 sm:w-8 sm:h-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                *ngFor="let path of route.iconPaths"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                [attr.d]="path"
-              />
-            </svg>
-            <span class="text-sm sm:text-base lg:text-2xl font-reem-kufi">
-              {{ route.label }}
-            </span>
-          </button>
-        </a>
-      </ng-container>
-    </div>
-  </div>
-</header>
+<div class="justify-between p-4 h-32 hidden lg:flex">
+  <div class="flex space-x-20 relative">
+    <img
+      src="assets/images/logo/logo.webp"
+      routerLink="/home"
+      [class.opacity-0]="!isHome"
+      routerLinkActive="animate__fadeOutBottomRight animate__animated animate__delay-2s animate__faster"
+      class="smooth hover:brightness-125 cursor-pointer absolute w-24 object-contain left-20"
+    />
+    <img
+      [class.animate__fadeInBottomRight]="!isHome"
+      [class.opacity-0]="isHome"
+      src="assets/images/logo/logo.webp"
+      class="pointer-events-none animate__animated object-contain h-full"
+    />
 
-<!-- ! MOBILE FOOTER CONTENT -->
-<div
-  class="inset-x-0 h-16 text-white flex justify-center lg:hidden animate__fadeInUp animate__animated fixed bottom-5 z-50"
->
-  <div
-    class="flex flew-row w-11/12 h-full rounded-full px-3 bg-legio-green-400 shadow-lg border-4 border-legio-gold-500 justify-around"
-  >
-    <ng-container *ngFor="let route of appRoutes">
-      <a [attr.href]="route.href" class="w-1/5 p-1 my-auto">
-        <span
-          [class.pointer-events-none]="route.disabled"
-          [class.text-gray-500]="route.disabled"
-          class="rounded-full flex justify-center"
-          [routerLink]="route.href?.length ? null : route.routerLink"
-          routerLinkActive="bg-legio-gold-500"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-8 h-8 mx-1 sm:w-6 sm:h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              *ngFor="let path of route.iconPaths"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              [attr.d]="path"
-            />
-          </svg>
-        </span>
-      </a>
+    <ng-container *ngFor="let item of appRoutes">
+      <ng-container
+        [ngTemplateOutlet]="NavItem"
+        [ngTemplateOutletContext]="{item}"
+      ></ng-container>
     </ng-container>
   </div>
+  <div class="my-auto">
+    <ng-container
+      [ngTemplateOutlet]="NavItem"
+      [ngTemplateOutletContext]="{
+        item: {
+          disabled: false,
+          href: 'https://members.legioneetruria.com/',
+          iconPaths: [
+            'M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+          ],
+          label: 'Area membri'
+        }
+      }"
+    ></ng-container>
+  </div>
 </div>
+
+<ng-template #NavItem let-item="item">
+  <a [attr.href]="item.href" class="my-auto">
+    <button
+      [routerLink]="item.href?.length ? null : item.routerLink"
+      routerLinkActive="active"
+      class="nav-item smooth"
+    >
+      {{ item.label }}
+    </button>
+  </a>
+</ng-template>

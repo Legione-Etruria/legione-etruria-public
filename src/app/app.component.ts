@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
-import { NgxSmoothScrollDirectiveOption } from '@eunsatio/ngx-smooth-scroll';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,21 +8,28 @@ import { NgxSmoothScrollDirectiveOption } from '@eunsatio/ngx-smooth-scroll';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public options: NgxSmoothScrollDirectiveOption = {
-    duration: 500, // Global option
-    wheel: {
-      duration: 600, // This will override global option
-      timingFunction: 'ease-out',
-    },
-    keydown: {
-      timingFunction: 'ease-in',
-    },
-  };
-  constructor(
-    private router: Router,
+  public isHome = false;
 
-    private titleService: Title
-  ) {
+  constructor(private router: Router, private titleService: Title) {
     titleService.setTitle('Legione Etruria');
+  }
+
+  ngOnInit(): void {
+    if (this.router.url === '/home') {
+      this.isHome = true;
+    }
+
+    this.router.events.subscribe((_e) => {
+      if (!(_e instanceof NavigationEnd)) {
+        return;
+      }
+
+      if (this.router.url === '/home') {
+        this.isHome = true;
+        return;
+      }
+
+      this.isHome = false;
+    });
   }
 }
