@@ -1,14 +1,15 @@
-<div class="justify-between p-4 h-32 hidden lg:flex">
+<div class="justify-between p-4 px-0 h-32 hidden lg:flex">
   <div class="flex space-x-20 relative">
     <img
       src="assets/images/logo/logo.webp"
       routerLink="/home"
       [class.opacity-0]="!isHome"
-      routerLinkActive="animate__fadeOutBottomRight  animate__delay-2s animate__faster"
+      routerLinkActive="animate__fadeOutBottomRight  animate__fast"
+      style="animation-delay: 1.5s"
       class="smooth hover:brightness-125 cursor-pointer absolute w-24 object-contain left-20 animate__animated"
     />
     <img
-      [ngClass]="isHome ? 'opacity-0' : 'animate__fadeInBottomRight'"
+      [ngClass]="isHome ? 'opacity-0' : 'animate__fadeInLeft'"
       src="assets/images/logo/logo.webp"
       class="pointer-events-none animate__animated object-contain h-full"
     />
@@ -20,7 +21,7 @@
       ></ng-container>
     </ng-container>
   </div>
-  <div class="my-auto">
+  <div class="my-auto mx-2">
     <ng-container
       [ngTemplateOutlet]="NavItem"
       [ngTemplateOutletContext]="{

@@ -37,16 +37,14 @@
         continuare a fare il nostro meglio nel mondo del softair !
       </div>
 
-      <div
-        class="flex lg:flex-col lg:w-3/12 justify-center lg:space-y-5 animate__fadeInRight animate__animated animate__delay-2s"
-      >
+      <div class="flex lg:flex-col lg:w-3/12 justify-center lg:space-y-5">
         <div class="logo-container">
           <img
             (mousemove)="utilsService.rotateItem($event, 4)"
             (mouseleave)="utilsService.resetItem($event)"
             id="coreto_img"
             src="../../assets/images/logo/coreto_logo.webp"
-            class="logo"
+            class="logo animate__fadeInRight animate__animated animate__delay-2s"
           />
         </div>
         <div class="logo-container">
@@ -55,7 +53,8 @@
             (mouseleave)="utilsService.resetItem($event)"
             id="figt_img"
             src="../../assets/images/logo/figt_logo.webp"
-            class="logo"
+            style="animation-delay: 2.2s"
+            class="logo animate__fadeInRight animate__animated"
           />
         </div>
       </div>
