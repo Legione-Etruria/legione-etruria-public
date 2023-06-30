@@ -23,3 +23,7 @@
 .smooth {
   @apply transition-all duration-500 ease-in-out;
 }
+
+.lines {
+  @apply h-full w-full absolute bottom-0 left-0 z-0 opacity-5 hidden lg:block;
+}
