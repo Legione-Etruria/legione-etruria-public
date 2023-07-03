@@ -1,7 +1,7 @@
 <app-loading (loadingDone)="loading = false"></app-loading>
 
 <div
-  class="w-full h-full overflow-auto overflow-x-hidden lg:overflow-clip flex flex-col lg:flex-row smooth"
+  class="w-full h-full overflow-auto overflow-x-hidden lg:overflow-clip flex flex-col lg:flex-row lg:justify-around smooth"
   [class.opacity-0]="loading"
 >
   <svg
@@ -48,7 +48,7 @@
   </svg>
 
   <div
-    class="flex flex-col justify-center lg:mx-20 page-title w-full lg:w-6/12 text-center items-center"
+    class="flex flex-col justify-center lg:justify-start lg:my-5 page-title w-full lg:w-6/12 text-center items-center"
   >
     <div
       (mousemove)="utilsService.rotateItem($event, 9)"
@@ -63,7 +63,7 @@
 
     <h1 class="whitespace-nowrap pt-4 drop-shadow-xl w-fit">LEGIONE ETRURIA</h1>
     <h4
-      class="text-lg normal-case text-gray-100 drop-shadow font-special-elite w-full lg:w-11/12 mx-auto py-2 text-center lg:text-right"
+      class="text-lg normal-case text-gray-100 drop-shadow font-special-elite w-full lg:w-10/12 mx-auto py-2 text-center lg:text-right"
     >
       <div>Italian Airsoft Team 🇮🇹</div>
 
@@ -81,39 +81,41 @@
         🏅
       </div>
     </h4>
-
-    <app-socials></app-socials>
   </div>
-  <div class="w-full lg:w-4/12 relative group">
+
+  <div class="w-full lg:w-4/12 relative">
+    <app-socials></app-socials>
     <!-- SOLDIER ARMY BORDER -->
-    <div
-      #Border
-      class="absolute w-10/12 lg:w-full h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__delay-2s animate__slow animate__zoomIn animate__delay-3s shadow-2xl border-legio-gold-200 shadow-legio-gold-100 card smooth brightness-125"
-    >
-      <img
-        src="/assets/images/splash/landscape_1.webp"
-        class="object-center h-full w-full rounded-2xl blur brightness-110 group-hover:scale-110 group-hover:blur-sm smooth object-cover"
-      />
-    </div>
-
-    <div
-      class="call-to-action flex flex-col justify-center z-10 items-center w-fit h-fit smooth group-hover:scale-110"
-    >
-      <button
-        routerLink="/contattaci"
-        class="text-bold backdrop-blur-xl backdrop-brightness-90 rounded-full text-legio-gold-50 hover:text-white py-4 px-6 text-2xl mt-5 transition duration-500 ease-in-out hover:bg-legio-gold-500 transform hover:-translate-t-1 hover:scale-110 my-10 animate__animated animate__delay-2s animate__slow animate__fadeInUp animate__delay-3s font-reem-kufi shadow-lg shadow-legio-gold-50/50"
+    <div class="group">
+      <div
+        #Border
+        class="absolute w-10/12 lg:w-full h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__delay-2s animate__slow animate__zoomIn animate__delay-3s shadow-2xl border-legio-gold-200 shadow-legio-gold-100 card smooth brightness-125"
       >
-        Iscriviti ora!
-      </button>
-    </div>
+        <img
+          src="/assets/images/splash/landscape_1.webp"
+          class="object-center h-full w-full rounded-2xl blur brightness-110 group-hover:blur-none smooth object-cover"
+        />
+      </div>
 
-    <div
-      class="-scale-x-100 lg:absolute bottom-0 left-0 right-0 pointer-events-none"
-    >
-      <img
-        src="/assets/images/splash/night.webp"
-        class="animate__fadeInLeft animate__slow animate__animated animate__delay-2s -z-10 lg:z-auto object-contain object-bottom w-full h-3/6 lg:h-screen"
-      />
+      <div
+        class="call-to-action flex flex-col justify-center z-10 items-center w-fit h-fit smooth group-hover:scale-110"
+      >
+        <button
+          routerLink="/contattaci"
+          class="text-bold backdrop-blur-xl backdrop-brightness-90 rounded-full text-legio-gold-50 hover:text-white py-4 px-6 text-4xl mt-5 transition duration-500 ease-in-out hover:bg-legio-gold-500 transform hover:-translate-t-1 hover:scale-110 my-10 animate__animated animate__delay-2s animate__slow animate__fadeInUp animate__delay-3s font-reem-kufi shadow-lg shadow-legio-gold-50/50"
+        >
+          Iscriviti ora!
+        </button>
+      </div>
+
+      <div
+        class="-scale-x-100 lg:absolute bottom-0 left-0 right-0 pointer-events-none h-full"
+      >
+        <img
+          src="/assets/images/splash/night.webp"
+          class="animate__fadeInLeft animate__slow animate__animated animate__delay-2s -z-10 lg:z-auto object-cover overflow-visible object-bottom w-full h-3/6 lg:h-full group-hover:blur-sm smooth"
+        />
+      </div>
     </div>
   </div>
 </div>
