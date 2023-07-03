@@ -81,21 +81,23 @@
         🏅
       </div>
     </h4>
+
+    <app-socials></app-socials>
   </div>
-  <div class="w-full lg:w-6/12 relative">
+  <div class="w-full lg:w-4/12 relative group">
     <!-- SOLDIER ARMY BORDER -->
     <div
       #Border
-      class="absolute w-10/12 lg:w-8/12 h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__delay-2s animate__slow animate__zoomIn animate__delay-3s shadow-2xl border-legio-gold-200 shadow-legio-gold-100 card smooth brightness-125"
+      class="absolute w-10/12 lg:w-full h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__delay-2s animate__slow animate__zoomIn animate__delay-3s shadow-2xl border-legio-gold-200 shadow-legio-gold-100 card smooth brightness-125"
     >
       <img
         src="/assets/images/splash/landscape_1.webp"
-        class="object-center h-full w-full rounded-2xl blur brightness-110"
+        class="object-center h-full w-full rounded-2xl blur brightness-110 group-hover:scale-110 group-hover:blur-sm smooth object-cover"
       />
     </div>
 
     <div
-      class="call-to-action flex flex-col justify-center z-10 items-center w-fit h-fit"
+      class="call-to-action flex flex-col justify-center z-10 items-center w-fit h-fit smooth group-hover:scale-110"
     >
       <button
         routerLink="/contattaci"
@@ -103,10 +105,11 @@
       >
         Iscriviti ora!
       </button>
-      <app-socials></app-socials>
     </div>
 
-    <div class="-scale-x-100 lg:absolute bottom-0 left-0 right-0">
+    <div
+      class="-scale-x-100 lg:absolute bottom-0 left-0 right-0 pointer-events-none"
+    >
       <img
         src="/assets/images/splash/night.webp"
         class="animate__fadeInLeft animate__slow animate__animated animate__delay-2s -z-10 lg:z-auto object-contain object-bottom w-full h-3/6 lg:h-screen"
