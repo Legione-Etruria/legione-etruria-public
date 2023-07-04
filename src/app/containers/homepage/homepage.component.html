@@ -4,54 +4,13 @@
   class="w-full h-full overflow-auto overflow-x-hidden lg:overflow-clip flex flex-col lg:flex-row lg:justify-around smooth"
   [class.opacity-0]="loading"
 >
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:svgjs="http://svgjs.dev/svgjs"
-    class="lines"
-    preserveAspectRatio="none"
-    viewBox="0 0 1440 560"
-  >
-    <g mask='url("#SvgjsMask1006")' fill="none">
-      <path
-        d="M505.65 628.95C630.65 602.85 594.87 279.19 877.34 278.59 1159.82 277.99 1430.2 445.55 1620.73 446.59"
-        stroke="rgba(255, 255, 255, 0.62)"
-        stroke-width="2"
-      ></path>
-      <path
-        d="M226.22 636.81C444.04 612.3 573.17 134.65 942.98 131.8 1312.78 128.95 1477.16 271.15 1659.73 271.8"
-        stroke="rgba(255, 255, 255, 0.62)"
-        stroke-width="2"
-      ></path>
-      <path
-        d="M303.33 636.68C452.55 582.43 471.64 150.17 694.39 136.27 917.14 122.37 889.93 206.27 1085.46 206.27 1280.99 206.27 1377.2 136.55 1476.52 136.27"
-        stroke="rgba(255, 255, 255, 0.62)"
-        stroke-width="2"
-      ></path>
-      <path
-        d="M798.1 663.87C909.81 626.55 865.3 301.79 1097.18 299.85 1329.07 297.91 1542.38 427.92 1695.35 428.65"
-        stroke="rgba(255, 255, 255, 0.62)"
-        stroke-width="2"
-      ></path>
-      <path
-        d="M479.82 572.91C636.02 571.7 764.63 424.51 1085.24 418.47 1405.86 412.43 1525.17 155.62 1690.67 149.67"
-        stroke="rgba(255, 255, 255, 0.62)"
-        stroke-width="2"
-      ></path>
-    </g>
-    <defs>
-      <mask id="SvgjsMask1006">
-        <rect width="1440" height="560" fill="#ffffff"></rect>
-      </mask>
-    </defs>
-  </svg>
+  <app-lines type="start"></app-lines>
 
   <div
     class="flex flex-col justify-center lg:justify-start lg:my-5 page-title w-full lg:w-6/12 text-center items-center"
   >
     <div
-      (mousemove)="utilsService.rotateItem($event, 9)"
+      (mousemove)="utilsService.rotateItem($event, 15)"
       (mouseleave)="utilsService.resetItem($event)"
       class="h-2/6 mx-auto"
     >
@@ -93,7 +52,7 @@
       >
         <img
           src="/assets/images/splash/landscape_2.webp"
-          class="object-center h-full w-full rounded-2xl blur group-hover:blur-none smooth object-cover"
+          class="object-center h-full w-full rounded-2xl blur brightness-50 group-hover:brightness-90 group-hover:blur-none smooth object-cover"
         />
       </div>
 

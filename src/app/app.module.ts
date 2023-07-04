@@ -16,6 +16,8 @@ import { PlayWithUsComponent } from './containers/play-with-us/play-with-us.comp
 import { ParallaxDirective } from './parallax.directive';
 import { UtilsService } from './services/utils.service';
 import { CursorComponent } from './components/cursor/cursor.component';
+import { PageTitleComponent } from './components/page-title/page-title.component';
+import { LinesComponent } from './components/lines/lines.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { CursorComponent } from './components/cursor/cursor.component';
     CarouselComponent,
     LoadingComponent,
     CursorComponent,
+    PageTitleComponent,
+    LinesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
   providers: [UtilsService],
