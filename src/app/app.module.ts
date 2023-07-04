@@ -15,6 +15,7 @@ import { MembersComponent } from './containers/members/members.component';
 import { PlayWithUsComponent } from './containers/play-with-us/play-with-us.component';
 import { ParallaxDirective } from './parallax.directive';
 import { UtilsService } from './services/utils.service';
+import { CursorComponent } from './components/cursor/cursor.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UtilsService } from './services/utils.service';
     FooterComponent,
     CarouselComponent,
     LoadingComponent,
+    CursorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
   providers: [UtilsService],

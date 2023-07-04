@@ -1,0 +1,38 @@
+.cursor {
+  width: 22px;
+  height: 22px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999999;
+}
+
+@keyframes expandAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.expand {
+  animation: expandAnim 0.5s ease-in-out infinite;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+p {
+  color: white;
+  font-family: "arial";
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.4em;
+
+  a {
+    color: teal;
+  }
+}
