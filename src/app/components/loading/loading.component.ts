@@ -13,10 +13,12 @@ export class LoadingComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.onDone();
-    }, 2000);
+    }, 500);
   }
 
   onDone(): void {
-    this.loadingDone.emit();
+    setTimeout(() => {
+      this.loadingDone.emit();
+    }, 2000);
   }
 }
