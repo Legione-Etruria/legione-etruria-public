@@ -2,29 +2,27 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './containers/about-us/about-us.component';
 import { HomepageComponent } from './containers/homepage/homepage.component';
-import { MembersComponent } from './containers/members/members.component';
 import { PlayWithUsComponent } from './containers/play-with-us/play-with-us.component';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    component: HomepageComponent,
-  },
   {
     path: 'qr',
     redirectTo: '/home',
   },
   {
-    path: 'membri',
-    component: MembersComponent,
-  },
-  {
-    path: 'chi-siamo',
-    component: AboutUsComponent,
+    path: 'home',
+    component: HomepageComponent,
+    data: { animation: 0 },
   },
   {
     path: 'contattaci',
     component: PlayWithUsComponent,
+    data: { animation: 1 },
+  },
+  {
+    path: 'chi-siamo',
+    component: AboutUsComponent,
+    data: { animation: 2 },
   },
   {
     path: '**',

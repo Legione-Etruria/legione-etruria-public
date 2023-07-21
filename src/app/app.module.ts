@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ContactsButtonsComponent } from './components/contacts-buttons/contacts-buttons.component';
+import { CursorComponent } from './components/cursor/cursor.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LinesComponent } from './components/lines/lines.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { NavComponent } from './components/nav/nav.component';
+import { PageTitleComponent } from './components/page-title/page-title.component';
 import { SocialsComponent } from './components/socials/socials.component';
 import { AboutUsComponent } from './containers/about-us/about-us.component';
 import { HomepageComponent } from './containers/homepage/homepage.component';
@@ -15,10 +19,6 @@ import { MembersComponent } from './containers/members/members.component';
 import { PlayWithUsComponent } from './containers/play-with-us/play-with-us.component';
 import { ParallaxDirective } from './parallax.directive';
 import { UtilsService } from './services/utils.service';
-import { CursorComponent } from './components/cursor/cursor.component';
-import { PageTitleComponent } from './components/page-title/page-title.component';
-import { LinesComponent } from './components/lines/lines.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +37,12 @@ import { LinesComponent } from './components/lines/lines.component';
     PageTitleComponent,
     LinesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgxSmoothScrollModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgxSmoothScrollModule,
+    BrowserAnimationsModule,
+  ],
   providers: [UtilsService],
   bootstrap: [AppComponent],
 })

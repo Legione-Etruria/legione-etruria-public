@@ -15,8 +15,9 @@
 
 <div
   id="body-wrapper"
-  class="lg:min-h-screen relative w-full overflow-x-hidden overflow-visible"
+  [@routeAnimations]="prepareRoute(outlet)"
+  class="lg:min-h-screen relative w-full overflow-x-hidden"
 >
-  <router-outlet></router-outlet>
+  <router-outlet #outlet="outlet"></router-outlet>
 </div>
 <app-footer></app-footer>
