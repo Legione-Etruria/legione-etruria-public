@@ -23,11 +23,16 @@ export class CursorComponent implements OnInit {
       return;
     }
 
-    if (!this.cursor) {
-      return;
-    }
-    this.cursor.nativeElement.style.left = event.pageX - 10 + 'px';
-    this.cursor.nativeElement.style.top = event.pageY - 10 + 'px';
+    this.cursor.nativeElement.style.background = '#fff';
+
+    setTimeout(() => {
+      if (!this.cursor) {
+        return;
+      }
+      this.cursor.nativeElement.style.left = `${event.pageX - 10}px`;
+      this.cursor.nativeElement.style.top = `${event.pageY - 10}px`;
+      this.cursor.nativeElement.style.background = 'transparent';
+    }, 50);
   }
 
   @HostListener('document:click', ['$event'])

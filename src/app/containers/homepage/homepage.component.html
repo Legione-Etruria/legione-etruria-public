@@ -1,7 +1,7 @@
 <app-loading (loadingDone)="loading = false"></app-loading>
 
 <div
-  class="w-full h-full overflow-auto overflow-x-hidden lg:overflow-clip flex flex-col lg:flex-row lg:justify-around smooth"
+  class="w-full lg:max-h-screen overflow-y-visible overflow-x-hidden lg:overflow-clip flex flex-col lg:flex-row lg:justify-around smooth"
   [class.opacity-0]="loading"
 >
   <app-lines type="start"></app-lines>
@@ -42,7 +42,7 @@
     </h4>
   </div>
 
-  <div class="w-full lg:w-4/12 relative">
+  <div class="w-full lg:w-4/12 lg:max-h-screen relative">
     <app-socials></app-socials>
     <!-- SOLDIER ARMY BORDER -->
     <div class="group">

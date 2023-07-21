@@ -7,6 +7,7 @@
   position: absolute;
   pointer-events: none;
   z-index: 9999999;
+  transition: background 0.2s ease-in-out;
 }
 
 @keyframes expandAnim {
