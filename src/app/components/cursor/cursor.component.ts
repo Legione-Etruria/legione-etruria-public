@@ -23,24 +23,47 @@ export class CursorComponent implements OnInit {
       return;
     }
 
-    this.cursor.nativeElement.style.background = '#fff';
+    this.cursor.nativeElement.style.background = 'transparent';
 
-    setTimeout(() => {
-      if (!this.cursor) {
-        return;
+    this.cursor.nativeElement.animate(
+      [
+        {
+          left: `${event.pageX - 10}px`,
+          top: `${event.pageY - 10}px`,
+          // background: '#fff',
+        },
+        // {
+        //   left: `${event.pageX - 10}px`,
+        //   top: `${event.pageY - 10}px`,
+        //   background: 'transparent',
+        // },
+      ],
+      {
+        duration: 300,
+        fill: 'forwards',
       }
-      this.cursor.nativeElement.style.left = `${event.pageX - 10}px`;
-      this.cursor.nativeElement.style.top = `${event.pageY - 10}px`;
-      this.cursor.nativeElement.style.background = 'transparent';
-    }, 50);
+    );
   }
 
   @HostListener('document:click', ['$event'])
   onClick(event: PointerEvent) {
-    this.cursor?.nativeElement.classList.add('expand');
-
-    setTimeout(() => {
-      this.cursor?.nativeElement.classList.remove('expand');
-    }, 500);
+    this.cursor?.nativeElement.animate(
+      [
+        {
+          scale: 1,
+        },
+        {
+          border: `1px solid rgb(255, 255, 255)`,
+          scale: 2.5,
+        },
+        {
+          scale: 1,
+        },
+      ],
+      {
+        duration: 500,
+        fill: 'both',
+      }
+    );
   }
 }
