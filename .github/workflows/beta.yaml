@@ -28,4 +28,4 @@ jobs:
           local-dir: ./dist/legione-etruria-client/
           server-dir: ./domains/legioneetruria.com/public_html/beta/
           username: u651057516
-          password: ${{ secrets.FTP_PASSWORD }}
+          password: ${{ secrets.FTP_PW }}
