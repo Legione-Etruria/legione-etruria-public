@@ -32,9 +32,6 @@ export class CursorComponent implements OnInit {
     if (cursorType === 'auto') {
       cursorType = this._getUnderlyingCursorType(event);
     }
-
-    console.log(cursorType);
-
     // Rest of the code
     switch (cursorType) {
       case 'pointer':
