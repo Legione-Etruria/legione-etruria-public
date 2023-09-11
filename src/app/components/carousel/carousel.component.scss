@@ -1,15 +1,67 @@
-.main-item {
-  @apply rounded-lg shadow-2xl  w-80 h-80 lg:w-96 lg:h-96 z-10 absolute my-auto;
+$n: 17; /* number of images*/
 
-  & > img {
-    @apply rounded-lg w-full h-full object-cover;
+.gallery {
+  --d: 30s; /* duration */
+  @apply grid;
+}
+.gallery > img {
+  grid-area: 1/1;
+  width: 300px;
+  height: 300px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  z-index: 2;
+  animation: slide var(--d) infinite, z-order var(--d) infinite steps(1);
+}
+.gallery img:last-child {
+  animation-name: slide, z-order-last;
+}
+
+@for $i from 1 to ($n + 1) {
+  .gallery > img:nth-child(#{$i}) {
+    animation-delay: calc(#{(1 - $i) / $n}* var(--d));
+    --r: #{(-20 + random(40)) * 1deg};
   }
 }
 
-.side-item {
-  @apply rounded-lg shadow-lg brightness-50 opacity-75 w-64 h-64 lg:w-80 lg:h-80 my-auto;
-
-  & > img {
-    @apply rounded-lg w-full h-full object-cover;
+@keyframes slide {
+  #{50/$n}% {
+    transform: translateX(120%) rotate(var(--r));
   }
+  0%,
+  100%,
+  #{100/$n}% {
+    transform: translateX(0%) rotate(var(--r));
+  }
+}
+
+@keyframes z-order {
+  #{50/$n}%,
+  #{100/$n}% {
+    z-index: 1;
+  }
+  #{100 - 100/$n}% {
+    z-index: 2;
+  }
+}
+
+@keyframes z-order-last {
+  #{50/$n}%,
+  #{100/$n}% {
+    z-index: 1;
+  }
+  #{100 - 50/$n}% {
+    z-index: 2;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #cdb380;
+  overflow: hidden;
 }

@@ -2,7 +2,7 @@
 
 <div class="smooth h-full" [class.opacity-0]="loading">
   <app-lines type="end"></app-lines>
-  <div class="flex flex-col justify-between min-h-screen overflow-hidden">
+  <div class="flex flex-col justify-between min-h-screen">
     <app-page-title label="chi siamo"></app-page-title>
     <div class="flex flex-col lg:flex-row justify-around w-full space-y-5 my-5">
       <div
@@ -60,10 +60,10 @@
       </div>
     </div>
 
-    <app-carousel [paths]="images" class="w-full my-10 lg:my-20"></app-carousel>
+    <app-carousel></app-carousel>
   </div>
   <div
-    class="absolute bottom-0 w-full h-4/6 -z-10 blur-lg animate__fadeInUp animate__animated animate__delay-2s animate__slow"
+    class="fixed bottom-0 w-full h-4/6 -z-10 blur-lg animate__fadeInUp animate__animated animate__delay-2s animate__slow overflow-y-clip"
   >
     <img
       src="/assets/images/splash/group_2.webp"
