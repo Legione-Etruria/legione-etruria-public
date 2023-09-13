@@ -46,15 +46,17 @@ export class CursorComponent implements OnInit {
         break;
     }
 
+    const _pxOffset = 10;
+
     this.cursor.nativeElement.animate(
       [
         {
-          left: `${event.pageX - 10}px`,
-          top: `${event.pageY - 10}px`,
+          left: `${event.pageX - _pxOffset}px`,
+          top: `${event.pageY - _pxOffset}px`,
         },
       ],
       {
-        duration: 300,
+        duration: 400,
         fill: 'forwards',
       }
     );
@@ -77,7 +79,7 @@ export class CursorComponent implements OnInit {
         },
       ],
       {
-        duration: 500,
+        duration: 350,
         fill: 'both',
       }
     );
@@ -108,12 +110,14 @@ export class CursorComponent implements OnInit {
   }
 
   private _pointerMouse(cursor: HTMLElement) {
+    this._currentScale = 2.5;
+
     cursor.animate(
       [
         {
-          scale: 2.5,
+          scale: this._currentScale,
           background: 'white',
-          opacity: 0.8,
+          opacity: 0.2,
         },
       ],
       {
@@ -121,8 +125,6 @@ export class CursorComponent implements OnInit {
         fill: 'forwards',
       }
     );
-
-    this._currentScale = 2.5;
   }
 
   private _textMouse(cursor: HTMLElement) {
