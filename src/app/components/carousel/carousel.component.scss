@@ -1,7 +1,7 @@
-$n: 17; /* number of images*/
+$n: 10; /* number of images*/
 
 .gallery {
-  --d: 30s; /* duration */
+  --d: 15s; /* duration */
   @apply grid p-20;
 }
 .gallery > img {
@@ -11,9 +11,11 @@ $n: 17; /* number of images*/
   aspect-ratio: 1;
   object-fit: cover;
   border: 10px solid #f2f2f2;
+  border-bottom-width: 50px;
   box-shadow: 0 0 4px #0007;
   z-index: 2;
   animation: slide var(--d) infinite, z-order var(--d) infinite steps(1);
+  @apply shadow-xl rounded-md;
 }
 .gallery img:last-child {
   animation-name: slide, z-order-last;
