@@ -2,11 +2,35 @@
 
 <div class="smooth h-full" [class.opacity-0]="loading">
   <app-lines type="end"></app-lines>
+
   <div class="flex flex-col justify-between min-h-screen">
     <app-page-title label="chi siamo"></app-page-title>
-    <div class="flex flex-col lg:flex-row justify-around w-full space-y-5 my-5">
+    <div class="flex justify-center my-5 items-center">
+      <div class="logo-container">
+        <img
+          (mousemove)="utilsService.rotateItem($event, 4)"
+          (mouseleave)="utilsService.resetItem($event)"
+          id="coreto_img"
+          src="../../assets/images/logo/coreto_logo.webp"
+          class="logo animate__fadeInRight animate__animated animate__delay-2s"
+        />
+      </div>
+      <div class="logo-container">
+        <img
+          (mousemove)="utilsService.rotateItem($event, 4)"
+          (mouseleave)="utilsService.resetItem($event)"
+          id="figt_img"
+          src="../../assets/images/logo/figt_logo.webp"
+          style="animation-delay: 2.2s"
+          class="logo animate__fadeInRight animate__animated"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col-reverse lg:flex-row justify-around w-full space-y-5 mb-5 lg:mb-0"
+    >
       <div
-        class="text-white font-reem-kufi w-full lg:w-6/12 text-center text-lg"
+        class="text-white font-reem-kufi w-11/12 mx-auto lg:w-6/12 text-center text-lg"
         style="word-spacing: 0.1rem"
       >
         <p>
@@ -36,32 +60,10 @@
         parte di questa emozionante comunità. Siamo pronti per nuove sfide e per
         continuare a fare il nostro meglio nel mondo del softair !
       </div>
-
-      <div class="flex lg:flex-col lg:w-3/12 justify-center lg:space-y-5">
-        <div class="logo-container">
-          <img
-            (mousemove)="utilsService.rotateItem($event, 4)"
-            (mouseleave)="utilsService.resetItem($event)"
-            id="coreto_img"
-            src="../../assets/images/logo/coreto_logo.webp"
-            class="logo animate__fadeInRight animate__animated animate__delay-2s"
-          />
-        </div>
-        <div class="logo-container">
-          <img
-            (mousemove)="utilsService.rotateItem($event, 4)"
-            (mouseleave)="utilsService.resetItem($event)"
-            id="figt_img"
-            src="../../assets/images/logo/figt_logo.webp"
-            style="animation-delay: 2.2s"
-            class="logo animate__fadeInRight animate__animated"
-          />
-        </div>
-      </div>
+      <app-carousel></app-carousel>
     </div>
-
-    <app-carousel></app-carousel>
   </div>
+
   <div
     class="fixed bottom-0 w-full h-4/6 -z-10 blur-lg animate__fadeInUp animate__animated animate__delay-2s animate__slow overflow-y-clip"
   >

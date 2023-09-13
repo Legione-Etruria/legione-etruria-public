@@ -2,7 +2,7 @@ $n: 17; /* number of images*/
 
 .gallery {
   --d: 30s; /* duration */
-  @apply grid;
+  @apply grid p-20;
 }
 .gallery > img {
   grid-area: 1/1;
