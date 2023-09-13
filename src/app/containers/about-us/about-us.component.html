@@ -8,19 +8,23 @@
     <div
       class="flex justify-center m-5 p-5 items-center border-b border-gray-400/50"
     >
-      <div class="logo-container">
+      <div
+        class="logo-container"
+        (mousemove)="utilsService.rotateItem($event, 15)"
+        (mouseleave)="utilsService.resetItem($event)"
+      >
         <img
-          (mousemove)="utilsService.rotateItem($event, 4)"
-          (mouseleave)="utilsService.resetItem($event)"
           id="coreto_img"
           src="../../assets/images/logo/coreto_logo.webp"
           class="logo animate__fadeInRight animate__animated animate__delay-2s"
         />
       </div>
-      <div class="logo-container">
+      <div
+        class="logo-container"
+        (mousemove)="utilsService.rotateItem($event, 15)"
+        (mouseleave)="utilsService.resetItem($event)"
+      >
         <img
-          (mousemove)="utilsService.rotateItem($event, 4)"
-          (mouseleave)="utilsService.resetItem($event)"
           id="figt_img"
           src="../../assets/images/logo/figt_logo.webp"
           style="animation-delay: 2.2s"
@@ -67,12 +71,16 @@
         continuare a fare il nostro meglio nel mondo del
         <span class="highlight">softair</span> !
       </div>
-      <app-carousel class="m-auto"></app-carousel>
+      <app-carousel
+        class="m-auto"
+        (mousemove)="utilsService.rotateItem($event, 15)"
+        (mouseleave)="utilsService.resetItem($event)"
+      ></app-carousel>
     </div>
   </div>
 
   <div
-    class="fixed bottom-0 w-full h-4/6 -z-10 blur-lg animate__fadeInUp animate__animated animate__delay-2s animate__slow overflow-y-clip"
+    class="fixed bottom-0 w-full h-4/6 -z-50 blur-lg animate__fadeInUp animate__animated animate__delay-2s animate__slow overflow-y-clip"
   >
     <img
       src="/assets/images/splash/group_2.webp"
