@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { UtilsService } from 'src/app/services/utils.service';
 @Component({
   selector: 'app-homepage',
@@ -9,7 +8,7 @@ import { UtilsService } from 'src/app/services/utils.service';
 export class HomepageComponent {
   public loading = true;
 
-  constructor(private titleService: Title, public utilsService: UtilsService) {
-    titleService.setTitle('Home');
+  constructor( public utilsService: UtilsService) {
+    
   }
 }

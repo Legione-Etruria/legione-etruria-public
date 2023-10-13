@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-play-with-us',
   templateUrl: './play-with-us.component.html',
   styleUrls: ['./play-with-us.component.scss'],
 })
-export class PlayWithUsComponent implements OnInit {
-  constructor(private titleService: Title) {
-    titleService.setTitle('Gioca con noi');
-  }
+export class PlayWithUsComponent  {
+  
 
-  ngOnInit(): void {}
+  
 }

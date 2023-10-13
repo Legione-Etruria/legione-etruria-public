@@ -1,8 +1,9 @@
+import { ViewportScroller } from '@angular/common';
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class UtilsService {
-  constructor() {}
+  constructor(private _scroller: ViewportScroller) {}
 
   rotateItem(event: MouseEvent, coeff = 50) {
     const card = event.currentTarget as HTMLElement;
@@ -25,5 +26,9 @@ export class UtilsService {
   resetItem(event: MouseEvent) {
     const card = event.currentTarget as HTMLElement;
     card.style.transform = '';
+  }
+
+  public scrollToAnchor(anchor: string): void {
+    this._scroller.scrollToAnchor(anchor);
   }
 }

@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { UtilsService } from 'src/app/services/utils.service';
 
 export type LogoState = 'visible' | 'firstLoad' | 'hidden';
 
@@ -7,12 +8,12 @@ export type LogoState = 'visible' | 'firstLoad' | 'hidden';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent implements OnInit {
+export class NavComponent  {
   @Input() public isHome = false;
 
   public appRoutes = [
     {
-      routerLink: '/contattaci',
+      anchor: 'play-with-us',
       iconPaths: [
         'M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z',
         'M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z',
@@ -20,7 +21,7 @@ export class NavComponent implements OnInit {
       label: 'Gioca con noi',
     },
     {
-      routerLink: '/chi-siamo',
+      anchor: 'about-us',
       iconPaths: [
         'M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
       ],
@@ -36,7 +37,9 @@ export class NavComponent implements OnInit {
   //   label: 'Home',
   // },
 
-  constructor() {}
+  constructor(public _utils: UtilsService) {}
 
-  ngOnInit(): void {}
+  
+
+
 }

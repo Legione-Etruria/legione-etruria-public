@@ -48,33 +48,36 @@
     <div class="group">
       <div
         #Border
-        class="absolute w-10/12 lg:w-full 2xl:w-[40rem] h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__delay-2s animate__slow animate__zoomIn animate__delay-3s shadow-2xl border-legio-gold-200 shadow-legio-gold-100 card smooth brightness-125"
+        class="absolute w-10/12 lg:w-full 2xl:w-[35rem] h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__delay-2s animate__slow animate__fadeInRight animate__delay-1s shadow-xl border-legio-gold-200 shadow-legio-gold-600 card smooth brightness-125 "
       >
         <img
           src="/assets/images/splash/landscape_2.webp"
           class="object-center h-full w-full rounded-2xl blur brightness-50 group-hover:brightness-90 group-hover:blur-none smooth object-cover"
         />
+
+        <div
+        class="-scale-x-100 lg:absolute bottom-0 left-0 right-0 pointer-events-none h-full overflow-hidden"
+        
+      >
+        <img
+          src="/assets/images/splash/night.webp"
+          class="-z-10 lg:z-auto overflow-visible object-bottom w-full h-full group-hover:blur-sm group-hover:brightness-50 smooth object-contain scale-125 group-hover:scale-100"
+        />
+      </div>
       </div>
 
       <div
         class="call-to-action flex flex-col justify-center z-10 items-center w-fit h-fit smooth group-hover:scale-110"
       >
         <button
-          routerLink="/contattaci"
-          class="text-bold backdrop-blur-xl backdrop-brightness-90 rounded-full text-legio-gold-50 hover:text-white py-4 px-6 text-4xl mt-5 transition duration-500 ease-in-out hover:bg-legio-gold-500 transform hover:-translate-t-1 hover:scale-110 my-10 animate__animated animate__delay-2s animate__slow animate__fadeInUp animate__delay-3s font-reem-kufi"
+          (click)="utilsService.scrollToAnchor('play-with-us')"
+          class="text-bold backdrop-blur-xl backdrop-brightness-90 rounded-full text-legio-gold-50 hover:text-white py-4 px-6 text-4xl transition duration-500 ease-in-out hover:bg-legio-gold-500 transform hover:-translate-t-1 hover:scale-110 my-10 animate__animated animate__delay-2s animate__slow animate__fadeInUp animate__delay-3s font-reem-kufi"
         >
           Iscriviti ora!
         </button>
       </div>
 
-      <div
-        class="-scale-x-100 lg:absolute bottom-0 left-0 right-0 pointer-events-none h-full"
-      >
-        <img
-          src="/assets/images/splash/night.webp"
-          class="animate__fadeInLeft animate__slow animate__animated animate__delay-2s -z-10 lg:z-auto overflow-visible object-bottom w-full h-3/6 lg:h-full group-hover:blur-sm smooth object-contain"
-        />
-      </div>
+     
     </div>
   </div>
 </div>

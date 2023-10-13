@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
@@ -10,7 +9,7 @@ import { UtilsService } from 'src/app/services/utils.service';
 export class AboutUsComponent {
   public loading = true;
 
-  constructor(titleService: Title, public utilsService: UtilsService) {
-    titleService.setTitle('Chi siamo');
+  constructor(public utilsService: UtilsService) {
+    
   }
 }
