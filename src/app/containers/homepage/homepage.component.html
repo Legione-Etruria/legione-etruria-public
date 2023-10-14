@@ -1,11 +1,6 @@
-<app-loading (loadingDone)="loading = false"></app-loading>
-
 <div
   class="w-full lg:max-h-screen overflow-y-visible overflow-x-hidden lg:overflow-clip flex flex-col lg:flex-row lg:justify-around smooth lg:mt-10"
-  [class.opacity-0]="loading"
 >
-  <app-lines type="start"></app-lines>
-
   <div
     class="flex flex-col justify-center lg:justify-start lg:my-5 page-title w-full lg:w-6/12 text-center items-center"
   >
@@ -22,7 +17,7 @@
 
     <h1 class="whitespace-nowrap pt-4 drop-shadow-xl w-fit">LEGIONE ETRURIA</h1>
     <h4
-      class="text-lg normal-case text-gray-100 drop-shadow font-special-elite w-full 2xl:w-6/12 mx-auto py-2 text-center lg:text-right"
+      class="text-sm lg:text-lg normal-case text-gray-100 drop-shadow font-special-elite w-full 2xl:w-6/12 mx-auto py-2 text-center lg:text-right"
     >
       <div>Italian Airsoft Team 🇮🇹</div>
 
@@ -45,10 +40,10 @@
   <div class="w-full lg:w-4/12 lg:max-h-screen relative">
     <app-socials></app-socials>
     <!-- SOLDIER ARMY BORDER -->
-    <div class="group">
+    <div class="group mt-2 mb-10 lg:mb-0">
       <div
         #Border
-        class="absolute w-10/12 lg:w-full 2xl:w-[35rem] h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__delay-2s animate__slow animate__fadeInRight animate__delay-1s shadow-xl border-legio-gold-200 shadow-legio-gold-600 card smooth brightness-125 "
+        class="lg:absolute w-10/12 lg:w-full 2xl:w-[35rem] lg:h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__slow animate__fadeInRight shadow-xl border-legio-gold-200 shadow-legio-gold-600 card smooth brightness-125"
       >
         <img
           src="/assets/images/splash/landscape_2.webp"
@@ -56,14 +51,13 @@
         />
 
         <div
-        class="-scale-x-100 lg:absolute bottom-0 left-0 right-0 pointer-events-none h-full overflow-hidden"
-        
-      >
-        <img
-          src="/assets/images/splash/night.webp"
-          class="-z-10 lg:z-auto overflow-visible object-bottom w-full h-full group-hover:blur-sm group-hover:brightness-50 smooth object-contain scale-125 group-hover:scale-100"
-        />
-      </div>
+          class="-scale-x-100 absolute bottom-0 left-0 right-0 pointer-events-none h-full overflow-hidden"
+        >
+          <img
+            src="/assets/images/splash/night.webp"
+            class="-z-10 lg:z-auto overflow-visible object-bottom w-full h-full group-hover:blur-sm group-hover:brightness-50 smooth object-contain scale-125 group-hover:scale-100"
+          />
+        </div>
       </div>
 
       <div
@@ -71,13 +65,11 @@
       >
         <button
           (click)="utilsService.scrollToAnchor('play-with-us')"
-          class="text-bold backdrop-blur-xl backdrop-brightness-90 rounded-full text-legio-gold-50 hover:text-white py-4 px-6 text-4xl transition duration-500 ease-in-out hover:bg-legio-gold-500 transform hover:-translate-t-1 hover:scale-110 my-10 animate__animated animate__delay-2s animate__slow animate__fadeInUp animate__delay-3s font-reem-kufi"
+          class="text-bold backdrop-blur-xl backdrop-brightness-90 rounded-full text-legio-gold-50 hover:text-white py-4 px-6 text-4xl transition duration-500 ease-in-out hover:bg-legio-gold-500 transform hover:-translate-t-1 hover:scale-110 my-10 animate__animated animate__slow animate__fadeInUp animate__delay-2s font-reem-kufi"
         >
           Iscriviti ora!
         </button>
       </div>
-
-     
     </div>
   </div>
 </div>

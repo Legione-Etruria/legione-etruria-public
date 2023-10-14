@@ -9,23 +9,22 @@
   media="(prefers-color-scheme: dark)"
 />
 
-<app-nav ></app-nav>
+<app-nav></app-nav>
 
 <app-cursor></app-cursor>
 
 <div
   id="body-wrapper"
-  
-  class="lg:min-h-screen relative w-full overflow-hidden space-y-20"
+  class="lg:min-h-screen relative w-full overflow-hidden space-y-20 my-4 divide-y divide-gray-400/50"
 >
-<div class="relative">
-  <app-homepage id="homepage"></app-homepage>
-</div>
-<div class="relative">
-  <app-play-with-us id="play-with-us"></app-play-with-us>
-</div>
-<div class="relative">
-  <app-about-us id="about-us"></app-about-us>
-</div>
+  <div class="relative">
+    <app-homepage id="homepage"></app-homepage>
+  </div>
+  <div class="relative">
+    <app-play-with-us id="play-with-us"></app-play-with-us>
+  </div>
+  <div class="relative">
+    <app-about-us id="about-us"></app-about-us>
+  </div>
 </div>
 <app-footer></app-footer>
