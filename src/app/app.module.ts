@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
@@ -37,12 +36,7 @@ import { UtilsService } from './services/utils.service';
     PageTitleComponent,
     LinesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgxSmoothScrollModule,
-    BrowserAnimationsModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [UtilsService],
   bootstrap: [AppComponent],
 })
