@@ -7,9 +7,10 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-cursor',
-  templateUrl: './cursor.component.html',
-  styleUrls: ['./cursor.component.scss'],
+    selector: 'app-cursor',
+    templateUrl: './cursor.component.html',
+    styleUrls: ['./cursor.component.scss'],
+    standalone: false
 })
 export class CursorComponent implements OnInit {
   private _currentScale = 1;

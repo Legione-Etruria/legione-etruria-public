@@ -4,9 +4,10 @@ import { UtilsService } from 'src/app/services/utils.service';
 export type LogoState = 'visible' | 'firstLoad' | 'hidden';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss'],
+    selector: 'app-nav',
+    templateUrl: './nav.component.html',
+    styleUrls: ['./nav.component.scss'],
+    standalone: false
 })
 export class NavComponent  {
   @Input() public isHome = false;

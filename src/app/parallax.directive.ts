@@ -1,7 +1,8 @@
 import { Directive, Input, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appParallax]',
+    selector: '[appParallax]',
+    standalone: false
 })
 export class ParallaxDirective {
   @Input('ratio') parallaxRatio: number = 1;

@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'contact-button',
-  templateUrl: './contacts-buttons.component.html',
-  styleUrls: ['./contacts-buttons.component.scss'],
+    selector: 'contact-button',
+    templateUrl: './contacts-buttons.component.html',
+    styleUrls: ['./contacts-buttons.component.scss'],
+    standalone: false
 })
 export class ContactsButtonsComponent implements OnInit {
   @Input() contactName!: string;

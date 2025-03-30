@@ -4,10 +4,11 @@ import { RouterOutlet } from '@angular/router';
 import { slider } from './slider';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: [slider],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    animations: [slider],
+    standalone: false
 })
 export class AppComponent {
   
