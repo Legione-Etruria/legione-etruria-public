@@ -1,5 +1,5 @@
 .nav-item {
-  @apply text-white text-2xl lowercase hover:scale-110 font-reem-kufi p-1 hover:text-legio-gold-100;
+  @apply text-white lg:text-2xl lowercase hover:scale-110 font-reem-kufi p-1 hover:text-legio-gold-100 truncate;
 }
 
 .active {

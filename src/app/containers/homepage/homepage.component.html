@@ -2,7 +2,7 @@
   class="w-full lg:max-h-screen overflow-y-visible overflow-x-hidden lg:overflow-clip flex flex-col lg:flex-row lg:justify-around smooth lg:mt-10"
 >
   <div
-    class="flex flex-col justify-center lg:justify-start lg:my-5 page-title w-full lg:w-6/12 text-center items-center"
+    class="flex flex-col justify-center lg:justify-start lg:my-5 page-title w-full lg:w-6/12 text-center items-center space-y-2"
   >
     <div
       (mousemove)="utilsService.rotateItem($event, 15)"
@@ -17,7 +17,7 @@
 
     <h1 class="whitespace-nowrap pt-4 drop-shadow-xl w-fit">LEGIONE ETRURIA</h1>
     <h4
-      class="text-sm lg:text-lg normal-case text-gray-100 drop-shadow font-special-elite w-full 2xl:w-6/12 mx-auto py-2 text-center lg:text-right"
+      class="text-sm lg:text-lg normal-case text-gray-100 drop-shadow font-special-elite w-full 2xl:w-6/12 mx-auto py-2 text-center lg:text-start"
     >
       <div>Italian Airsoft Team 🇮🇹</div>
 
@@ -37,17 +37,17 @@
     </h4>
   </div>
 
-  <div class="w-full lg:w-4/12 lg:max-h-screen relative">
+  <div class="w-full lg:w-4/12 lg:max-h-screen relative mt-10 lg:mt-0">
     <app-socials></app-socials>
     <!-- SOLDIER ARMY BORDER -->
-    <div class="group mt-2 mb-10 lg:mb-0">
+    <div class="group mt-2 mb-10 lg:mb-0 w-full">
       <div
         #Border
-        class="lg:absolute w-10/12 lg:w-full 2xl:w-[35rem] lg:h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__slow animate__fadeInRight shadow-xl border-legio-gold-200 shadow-legio-gold-600 card smooth brightness-125"
+        class="lg:absolute w-10/12 lg:w-full 2xl:w-10/12 lg:h-5/6 rounded-3xl border-8 right-0 left-0 lg:top-0 bottom-10 lg:bottom-0 m-auto animate__animated animate__slow animate__fadeInRight shadow-xl border-legio-gold-200 shadow-legio-gold-600 card smooth brightness-125"
       >
         <img
           src="/assets/images/splash/landscape_2.webp"
-          class="object-center h-full w-full rounded-2xl blur brightness-50 group-hover:brightness-90 group-hover:blur-none smooth object-cover"
+          class="object-center h-full w-full rounded-2xl blur brightness-50 group-hover:brightness-90 group-hover:blur-0 smooth object-cover"
         />
 
         <div
@@ -63,12 +63,13 @@
       <div
         class="call-to-action flex flex-col justify-center z-10 items-center w-fit h-fit smooth group-hover:scale-110"
       >
-        <button
-          (click)="utilsService.scrollToAnchor('play-with-us')"
+        <a
+          href="https://wa.me/message/LXR54HWNTNY2P1"
+          target="_blank"
           class="text-bold backdrop-blur-xl backdrop-brightness-90 rounded-full text-legio-gold-50 hover:text-white py-4 px-6 text-4xl transition duration-500 ease-in-out hover:bg-legio-gold-500 transform hover:-translate-t-1 hover:scale-110 my-10 animate__animated animate__slow animate__fadeInUp animate__delay-2s font-reem-kufi"
         >
-          Iscriviti ora!
-        </button>
+          Vieni a giocare!
+        </a>
       </div>
     </div>
   </div>

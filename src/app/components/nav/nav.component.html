@@ -1,21 +1,26 @@
 <div
-  class="justify-between p-4 h-32 hidden lg:flex border-b mx-10 border-gray-400/50"
+  class="justify-between p-4 lg:h-32 flex border-b border-gray-400/50 bg-legio-green-400 fixed w-full z-50 top-0"
 >
-  <div class="flex space-x-20 relative">
+  <div class="flex justify-start space-x-10 relative">
     <img
+      *ngIf="
+        !['none', 'sm', 'md'].includes(this._utils.currentTailwindMediaQuery())
+      "
       src="assets/images/logo/logo.webp"
       (click)="this._utils.scrollToAnchor('homepage')"
       routerLinkActive="animate__fadeOutBottomRight  animate__fast"
       style="animation-delay: 1.5s"
-      class="smooth hover:brightness-125  w-24 object-contain left-20 animate__animated cursor-pointer"
+      class="smooth hover:brightness-125 w-24 object-contain left-20 animate__animated cursor-pointer hidden lg:block"
     />
 
-    <ng-container *ngFor="let item of appRoutes">
-      <ng-container
-        [ngTemplateOutlet]="NavItem"
-        [ngTemplateOutletContext]="{item}"
-      ></ng-container>
-    </ng-container>
+    @for (item of appRoutes; track $index) {
+
+    <ng-container
+      [ngTemplateOutlet]="NavItem"
+      [ngTemplateOutletContext]="{item}"
+    ></ng-container>
+
+    }
   </div>
   <div class="m-auto mx-2">
     <ng-container
@@ -35,7 +40,7 @@
 </div>
 
 <ng-template #NavItem let-item="item">
-  <a [attr.href]="item.href" class="my-auto">
+  <a [attr.href]="item.href" class="my-auto w-24 lg:w-auto">
     <button
       (click)="item.anchor ? this._utils.scrollToAnchor(item.anchor) : null"
       routerLinkActive="active"

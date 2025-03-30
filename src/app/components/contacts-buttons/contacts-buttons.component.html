@@ -3,18 +3,18 @@
   class="border-transparent text-legio-green-300 truncate hover:bg-white/10 rounded p-2 cursor-pointer"
   (click)="visitLink()"
 >
-  <div class="flex max-w-fit justify-center">
+  <div class="flex w-full justify-start gap-x-2">
     <i id="icon" class="{{ iconClass }} text-6xl" *ngIf="!imagePath"></i>
     <div class="flex flex-col justify-end">
       <div
         id="text-wrapper"
         class="align-top ml-2"
-        style="letter-spacing: 5px; color: #8d8d8d"
+        style="letter-spacing: 5px; color: rgb(209, 209, 209)"
       >
         <b id="contact-name" class="capitalize flex justifystart text-3xl">{{
           contactName
         }}</b>
-        <small>
+        <small class="opacity-70">
           {{ contactValue }}
         </small>
       </div>
